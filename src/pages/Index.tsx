@@ -62,68 +62,67 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="gradient-hero py-20 lg:py-32 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Hero Content */}
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-                Your Path to 
-                <span className="block text-secondary"> Pain-Free Living</span>
-              </h1>
-              <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl">
-                Experience professional chiropractic care that focuses on healing, wellness, and getting you back to the activities you love. Our expert team is here to help you achieve optimal health naturally.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button 
-                  size="lg" 
-                  className="bg-secondary hover:bg-secondary-light text-secondary-foreground border-0 shadow-secondary hover:scale-105 transition-bounce"
-                  asChild
-                >
-                  <Link to="/appointments">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    Book Appointment
-                  </Link>
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-smooth"
-                  asChild
-                >
-                  <Link to="/contact">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call (555) 123-4567
-                  </Link>
-                </Button>
-              </div>
-
-              {/* Trust Indicators */}
-              <div className="flex items-center justify-center lg:justify-start space-x-6 mt-8 text-primary-foreground/80">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">10+</div>
-                  <div className="text-sm">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">5000+</div>
-                  <div className="text-sm">Patients Treated</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">98%</div>
-                  <div className="text-sm">Success Rate</div>
-                </div>
-              </div>
+      <section className="relative py-20 lg:py-32 min-h-screen flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroImage} 
+            alt="Professional chiropractic care at Vertex Chiropractic"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50"></div>
+        </div>
+        
+        {/* Hero Content */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Your Path to 
+              <span className="block text-secondary"> Pain-Free Living</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl">
+              Experience professional chiropractic care that focuses on healing, wellness, and getting you back to the activities you love. Our expert team is here to help you achieve optimal health naturally.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Button 
+                size="lg" 
+                variant="light"
+                className="text-lg px-8 py-4 h-auto"
+                asChild
+              >
+                <Link to="/appointments">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Book Appointment
+                </Link>
+              </Button>
+              <Button 
+                variant="hero" 
+                size="lg"
+                className="text-lg px-8 py-4 h-auto"
+                asChild
+              >
+                <Link to="/contact">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (555) 123-4567
+                </Link>
+              </Button>
             </div>
 
-            {/* Hero Image */}
-            <div className="relative">
-              <img 
-                src={heroImage} 
-                alt="Professional chiropractic care at Vertex Chiropractic - Modern medical office with chiropractor treating patient"
-                className="w-full h-96 object-cover rounded-2xl shadow-primary"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center gap-8 text-white/90">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-secondary">10+</div>
+                <div className="text-sm uppercase tracking-wide">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-secondary">5000+</div>
+                <div className="text-sm uppercase tracking-wide">Patients Treated</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-secondary">98%</div>
+                <div className="text-sm uppercase tracking-wide">Success Rate</div>
+              </div>
             </div>
           </div>
         </div>
