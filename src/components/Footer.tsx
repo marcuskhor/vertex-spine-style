@@ -54,13 +54,14 @@ const Footer = () => {
               <div className="flex items-start space-x-3 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-secondary flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  123 Wellness Street<br />
-                  Health City, HC 12345
+                  Unit A-2-8, Perdana, Plaza Arkadia<br />
+                  3, Jalan Intisari, Desa Parkcity<br />
+                  52200 Kuala Lumpur, Wilayah Persekutuan
                 </span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Phone className="w-4 h-4 text-secondary" />
-                <span className="text-primary-foreground/80">(555) 123-4567</span>
+                <span className="text-primary-foreground/80">012-828 6173</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="w-4 h-4 text-secondary" />

@@ -121,9 +121,9 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Address</h4>
                       <p className="text-muted-foreground">
-                        123 Wellness Street<br />
-                        Health City, HC 12345<br />
-                        United States
+                        Unit A-2-8, Perdana, Plaza Arkadia<br />
+                        3, Jalan Intisari, Desa Parkcity<br />
+                        52200 Kuala Lumpur, Wilayah Persekutuan
                       </p>
                     </div>
                   </div>
@@ -135,8 +135,8 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Phone</h4>
                       <p className="text-muted-foreground">
-                        Main: (555) 123-4567<br />
-                        Emergency: (555) 123-4568
+                        Main: 012-828 6173<br />
+                        WhatsApp: 012-828 6173
                       </p>
                     </div>
                   </div>
@@ -185,7 +185,7 @@ const Contact = () => {
                       className="gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce"
                       asChild
                     >
-                      <a href="tel:+15551234567">
+                      <a href="tel:+60128286173">
                         <Phone className="w-4 h-4 mr-2" />
                         Call Now
                       </a>

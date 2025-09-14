@@ -222,18 +222,18 @@ const Appointments = () => {
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <p className="font-semibold text-foreground">(555) 123-4567</p>
+                      <p className="font-semibold text-foreground">012-828 6173</p>
                       <p className="text-sm text-muted-foreground">Main Office</p>
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground">(555) 123-4568</p>
-                      <p className="text-sm text-muted-foreground">Emergency Line</p>
+                      <p className="font-semibold text-foreground">012-828 6173</p>
+                      <p className="text-sm text-muted-foreground">WhatsApp</p>
                     </div>
                     <Button 
                       className="w-full gradient-primary border-0 text-primary-foreground shadow-primary"
                       asChild
                     >
-                      <a href="tel:+15551234567">
+                      <a href="tel:+60128286173">
                         <Phone className="w-4 h-4 mr-2" />
                         Call Now
                       </a>

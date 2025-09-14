@@ -42,7 +42,7 @@ const NotFound = () => {
         </div>
 
         <div className="mt-8 text-sm text-muted-foreground">
-          <p>Need help? <Link to="/contact" className="text-primary hover:underline">Contact us</Link> or call <a href="tel:+15551234567" className="text-primary hover:underline">(555) 123-4567</a></p>
+          <p>Need help? <Link to="/contact" className="text-primary hover:underline">Contact us</Link> or call <a href="tel:+60128286173" className="text-primary hover:underline">012-828 6173</a></p>
         </div>
       </div>
     </div>

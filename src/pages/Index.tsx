@@ -11,7 +11,7 @@ import {
   Calendar
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-chiropractic.jpg";
+import heroImage from "@/assets/hero-chiropractic-new.jpg";
 
 const Index = () => {
   const services = [
@@ -104,7 +104,7 @@ const Index = () => {
               >
                 <Link to="/contact">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (555) 123-4567
+                  Call 012-828 6173
                 </Link>
               </Button>
             </div>
@@ -124,6 +124,156 @@ const Index = () => {
                 <div className="text-sm uppercase tracking-wide">Success Rate</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services Preview */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Comprehensive Services
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              From pain relief to wellness programs, we offer specialized chiropractic treatments 
+              designed to address your unique health needs and restore your quality of life.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <Heart className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Spinal Adjustments</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Professional spinal manipulation to restore proper alignment, reduce pain, and improve mobility for lasting relief.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Manual spinal manipulation</li>
+                  <li>• Joint mobilization</li>
+                  <li>• Posture correction</li>
+                  <li>• Pain relief techniques</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <Users className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Physical Therapy</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Customized rehabilitation programs combining exercise therapy and strengthening for optimal recovery.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Therapeutic exercises</li>
+                  <li>• Strength training</li>
+                  <li>• Flexibility improvement</li>
+                  <li>• Injury rehabilitation</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <Award className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Sports Medicine</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Specialized treatment for athletes and active individuals, focusing on performance enhancement and injury prevention.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Sports injury treatment</li>
+                  <li>• Performance optimization</li>
+                  <li>• Recovery protocols</li>
+                  <li>• Prevention strategies</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <CheckCircle className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Wellness Programs</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Comprehensive wellness plans including lifestyle coaching and preventive care for long-term health.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Maintenance care plans</li>
+                  <li>• Lifestyle coaching</li>
+                  <li>• Nutritional guidance</li>
+                  <li>• Preventive treatments</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <Star className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Pain Management</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Advanced techniques for managing chronic pain conditions through natural, non-invasive treatments.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Chronic pain relief</li>
+                  <li>• Acute injury care</li>
+                  <li>• Non-invasive treatments</li>
+                  <li>• Holistic approach</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <Phone className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Consultation Services</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Professional consultations including health assessments and personalized treatment planning.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Comprehensive assessments</li>
+                  <li>• Treatment planning</li>
+                  <li>• Progress monitoring</li>
+                  <li>• Health education</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              className="gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce"
+              asChild
+            >
+              <Link to="/services">
+                View All Services & Pricing
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -278,13 +428,13 @@ const Index = () => {
             >
               <Link to="/contact">
                 <Phone className="w-5 h-5 mr-2" />
-                Call (555) 123-4567
+                Call 012-828 6173
               </Link>
             </Button>
           </div>
 
           <p className="text-primary-foreground/70 mt-6 text-sm">
-            Emergency appointments available • Insurance accepted • Free consultation
+            WhatsApp consultations available • Insurance accepted • Free consultation
           </p>
         </div>
       </section>
