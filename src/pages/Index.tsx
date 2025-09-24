@@ -379,37 +379,15 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center shadow-soft">
+          <div className="flex justify-center">
+            <Card className="text-center shadow-soft max-w-sm">
               <CardContent className="p-6">
                 <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg mb-4 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-                  <span className="text-accent-foreground/60 font-medium text-sm">Lead Chiropractor<br/>Portrait</span>
+                  <span className="text-accent-foreground/60 font-medium text-sm">Doctor<br/>Portrait</span>
                 </div>
                 <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. [Name]</h3>
-                <p className="text-accent-foreground/70 mb-3">Lead Chiropractor</p>
-                <p className="text-sm text-accent-foreground/80">Specialized in spinal adjustments and sports medicine with 15+ years experience.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center shadow-soft">
-              <CardContent className="p-6">
-                <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg mb-4 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-                  <span className="text-accent-foreground/60 font-medium text-sm">Physical Therapist<br/>Portrait</span>
-                </div>
-                <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. [Name]</h3>
-                <p className="text-accent-foreground/70 mb-3">Physical Therapist</p>
-                <p className="text-sm text-accent-foreground/80">Expert in rehabilitation therapy and pain management techniques.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center shadow-soft">
-              <CardContent className="p-6">
-                <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg mb-4 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-                  <span className="text-accent-foreground/60 font-medium text-sm">Wellness Specialist<br/>Portrait</span>
-                </div>
-                <h3 className="text-xl font-semibold text-accent-foreground mb-2">[Name]</h3>
-                <p className="text-accent-foreground/70 mb-3">Wellness Specialist</p>
-                <p className="text-sm text-accent-foreground/80">Focuses on holistic health approaches and lifestyle coaching.</p>
+                <p className="text-accent-foreground/70 mb-3">Chiropractor</p>
+                <p className="text-sm text-accent-foreground/80">Specialized in spinal adjustments, sports medicine, and holistic wellness with 15+ years experience.</p>
               </CardContent>
             </Card>
           </div>
