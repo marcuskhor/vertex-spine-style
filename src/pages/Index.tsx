@@ -325,12 +325,103 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Photo Gallery */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Clinic Gallery
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Take a look inside our modern facility and see the professional environment where healing happens.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {/* Vertical image slots */}
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Treatment Room<br/>Photo</span>
+            </div>
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Equipment<br/>Photo</span>
+            </div>
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Reception<br/>Area</span>
+            </div>
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Waiting<br/>Room</span>
+            </div>
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Therapy<br/>Equipment</span>
+            </div>
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Consultation<br/>Room</span>
+            </div>
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Facility<br/>Entrance</span>
+            </div>
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Advanced<br/>Equipment</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Our Team */}
       <section className="bg-accent py-20">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">
+              Meet Our Professional Team
+            </h2>
+            <p className="text-lg text-accent-foreground/80 max-w-2xl mx-auto">
+              Our experienced team of chiropractors and healthcare professionals are dedicated to your wellness journey.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="text-center shadow-soft">
+              <CardContent className="p-6">
+                <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg mb-4 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+                  <span className="text-accent-foreground/60 font-medium text-sm">Lead Chiropractor<br/>Portrait</span>
+                </div>
+                <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. [Name]</h3>
+                <p className="text-accent-foreground/70 mb-3">Lead Chiropractor</p>
+                <p className="text-sm text-accent-foreground/80">Specialized in spinal adjustments and sports medicine with 15+ years experience.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft">
+              <CardContent className="p-6">
+                <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg mb-4 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+                  <span className="text-accent-foreground/60 font-medium text-sm">Physical Therapist<br/>Portrait</span>
+                </div>
+                <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. [Name]</h3>
+                <p className="text-accent-foreground/70 mb-3">Physical Therapist</p>
+                <p className="text-sm text-accent-foreground/80">Expert in rehabilitation therapy and pain management techniques.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft">
+              <CardContent className="p-6">
+                <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg mb-4 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+                  <span className="text-accent-foreground/60 font-medium text-sm">Wellness Specialist<br/>Portrait</span>
+                </div>
+                <h3 className="text-xl font-semibold text-accent-foreground mb-2">[Name]</h3>
+                <p className="text-accent-foreground/70 mb-3">Wellness Specialist</p>
+                <p className="text-sm text-accent-foreground/80">Focuses on holistic health approaches and lifestyle coaching.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-accent-foreground/5 rounded-2xl p-8 h-80 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium">Practice Photo</span>
+            <div className="aspect-[4/5] bg-accent-foreground/5 rounded-2xl p-8 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium">Clinic Interior<br/>Photo</span>
             </div>
             
             <div>
