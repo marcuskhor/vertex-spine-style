@@ -12,13 +12,6 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-chiropractic-new.jpg";
-import image1 from "@/assets/IMG_0726.jpg";
-import image2 from "@/assets/IMG_7368.jpg";
-import image3 from "@/assets/IMG_1598.jpg";
-import image4 from "@/assets/IMG_3013.jpg";
-import image5 from "@/assets/IMG_3441.jpg";
-import image6 from "@/assets/IMG_5537.jpg";
-import boss from "@/assets/leh.jpg";
 
 const Index = () => {
   const services = [
@@ -345,48 +338,24 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {/* Clinic Photos */}
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
-              <img 
-                src={image1} 
-                alt="Vertex Chiropractic treatment room"
-                className="w-full h-full object-cover hover:scale-105 transition-smooth"
-              />
+            {/* Clinic Photos - Placeholders until images are uploaded */}
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Treatment Room<br/>Photo</span>
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
-              <img 
-                src={image2} 
-                alt="Professional chiropractic equipment"
-                className="w-full h-full object-cover hover:scale-105 transition-smooth"
-              />
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Equipment<br/>Photo</span>
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
-              <img 
-                src={image3} 
-                alt="Reception and waiting area"
-                className="w-full h-full object-cover hover:scale-105 transition-smooth"
-              />
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Reception<br/>Area</span>
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
-              <img 
-                src={image4} 
-                alt="Consultation room"
-                className="w-full h-full object-cover hover:scale-105 transition-smooth"
-              />
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Consultation<br/>Room</span>
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
-              <img 
-                src={image5} 
-                alt="Therapy and rehabilitation equipment"
-                className="w-full h-full object-cover hover:scale-105 transition-smooth"
-              />
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Therapy<br/>Equipment</span>
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
-              <img 
-                src={image6} 
-                alt="Advanced chiropractic equipment"
-                className="w-full h-full object-cover hover:scale-105 transition-smooth"
-              />
+            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium text-sm text-center">Advanced<br/>Equipment</span>
             </div>
           </div>
         </div>
@@ -407,12 +376,8 @@ const Index = () => {
           <div className="flex justify-center">
             <Card className="text-center shadow-soft max-w-sm">
               <CardContent className="p-6">
-                <div className="aspect-[3/4] rounded-lg mb-4 overflow-hidden shadow-soft">
-                  <img 
-                    src={boss} 
-                    alt="Dr. Leh - Professional Chiropractor"
-                    className="w-full h-full object-cover"
-                  />
+                <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg mb-4 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+                  <span className="text-accent-foreground/60 font-medium text-sm">Doctor<br/>Portrait</span>
                 </div>
                 <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. Leh</h3>
                 <p className="text-accent-foreground/70 mb-3">Lead Chiropractor</p>
@@ -427,12 +392,8 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
-              <img 
-                src={image1} 
-                alt="Vertex Chiropractic clinic interior"
-                className="w-full h-full object-cover"
-              />
+            <div className="aspect-[4/5] bg-accent-foreground/5 rounded-2xl p-8 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+              <span className="text-accent-foreground/60 font-medium">Clinic Interior<br/>Photo</span>
             </div>
             
             <div>
