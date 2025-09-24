@@ -345,33 +345,48 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {/* Vertical image slots */}
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
+            {/* Clinic Photos */}
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
-                src={boss} 
-                alt="Professional chiropractic care at Vertex Chiropractic"
-            />
+                src={image1} 
+                alt="Vertex Chiropractic treatment room"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Equipment<br/>Photo</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={image2} 
+                alt="Professional chiropractic equipment"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Reception<br/>Area</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={image3} 
+                alt="Reception and waiting area"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Waiting<br/>Room</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={image4} 
+                alt="Consultation room"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Therapy<br/>Equipment</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={image5} 
+                alt="Therapy and rehabilitation equipment"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Consultation<br/>Room</span>
-            </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Facility<br/>Entrance</span>
-            </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Advanced<br/>Equipment</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={image6} 
+                alt="Advanced chiropractic equipment"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
           </div>
         </div>
@@ -392,12 +407,16 @@ const Index = () => {
           <div className="flex justify-center">
             <Card className="text-center shadow-soft max-w-sm">
               <CardContent className="p-6">
-                <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg mb-4 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-                  <span className="text-accent-foreground/60 font-medium text-sm">Doctor<br/>Portrait</span>
+                <div className="aspect-[3/4] rounded-lg mb-4 overflow-hidden shadow-soft">
+                  <img 
+                    src={boss} 
+                    alt="Dr. Leh - Professional Chiropractor"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. [Name]</h3>
-                <p className="text-accent-foreground/70 mb-3">Chiropractor</p>
-                <p className="text-sm text-accent-foreground/80">Specialized in spinal adjustments, sports medicine, and holistic wellness with 15+ years experience.</p>
+                <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. Leh</h3>
+                <p className="text-accent-foreground/70 mb-3">Lead Chiropractor</p>
+                <p className="text-sm text-accent-foreground/80">Specialized in spinal adjustments, sports medicine, and holistic wellness with 15+ years experience in helping patients achieve optimal health.</p>
               </CardContent>
             </Card>
           </div>
@@ -408,8 +427,12 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="aspect-[4/5] bg-accent-foreground/5 rounded-2xl p-8 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium">Clinic Interior<br/>Photo</span>
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
+              <img 
+                src={image1} 
+                alt="Vertex Chiropractic clinic interior"
+                className="w-full h-full object-cover"
+              />
             </div>
             
             <div>
