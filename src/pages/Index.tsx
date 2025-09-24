@@ -338,24 +338,55 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {/* Clinic Photos - Placeholders until images are uploaded */}
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Treatment Room<br/>Photo</span>
+            {/* Clinic Photos */}
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src="/src/assets/IMG_0726.JPG" 
+                alt="Dr. Leh providing pediatric chiropractic care"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Equipment<br/>Photo</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src="/src/assets/IMG_7368.JPG" 
+                alt="Professional chiropractic adjustment treatment"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Reception<br/>Area</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src="/src/assets/IMG_1598.JPG" 
+                alt="Spinal anatomy consultation and education"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Consultation<br/>Room</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src="/src/assets/IMG_3013.JPG" 
+                alt="Manual therapy and spinal adjustment"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Therapy<br/>Equipment</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src="/src/assets/IMG_3441.JPG" 
+                alt="Patient consultation and examination"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Advanced<br/>Equipment</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src="/src/assets/IMG_5537.JPG" 
+                alt="Advanced chiropractic treatment techniques"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
+            </div>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src="/src/assets/IMG_3014.JPG" 
+                alt="Therapeutic chiropractic care"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
           </div>
         </div>
@@ -376,12 +407,16 @@ const Index = () => {
           <div className="flex justify-center">
             <Card className="text-center shadow-soft max-w-sm">
               <CardContent className="p-6">
-                <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg mb-4 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-                  <span className="text-accent-foreground/60 font-medium text-sm">Doctor<br/>Portrait</span>
+                <div className="aspect-[3/4] rounded-lg mb-4 overflow-hidden shadow-soft">
+                  <img 
+                    src="/src/assets/leh.jpg" 
+                    alt="Dr. Leh - Lead Chiropractor at Vertex Chiropractic"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. Leh</h3>
                 <p className="text-accent-foreground/70 mb-3">Lead Chiropractor</p>
-                <p className="text-sm text-accent-foreground/80">Specialized in spinal adjustments, sports medicine, and holistic wellness with 15+ years experience in helping patients achieve optimal health.</p>
+                <p className="text-sm text-accent-foreground/80">Specialized in spinal adjustments, sports medicine, and holistic wellness with extensive experience in helping patients achieve optimal health and pain-free living.</p>
               </CardContent>
             </Card>
           </div>
@@ -392,8 +427,12 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="aspect-[4/5] bg-accent-foreground/5 rounded-2xl p-8 flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium">Clinic Interior<br/>Photo</span>
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
+              <img 
+                src="/src/assets/IMG_1598.JPG" 
+                alt="Dr. Leh explaining spinal health at Vertex Chiropractic clinic"
+                className="w-full h-full object-cover"
+              />
             </div>
             
             <div>
