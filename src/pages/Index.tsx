@@ -12,6 +12,13 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-chiropractic-new.jpg";
+import image1 from "@/assets/IMG_0726.jpg";
+import image2 from "@/assets/IMG_7368.jpg";
+import image3 from "@/assets/IMG_1598.jpg";
+import image4 from "@/assets/IMG_3013.jpg";
+import image5 from "@/assets/IMG_3441.jpg";
+import image6 from "@/assets/IMG_5537.jpg";
+import boss from "@/assets/leh.jpg";
 
 const Index = () => {
   const services = [
@@ -340,7 +347,10 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {/* Vertical image slots */}
             <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
-              <span className="text-accent-foreground/60 font-medium text-sm text-center">Treatment Room<br/>Photo</span>
+              <img 
+                src={boss} 
+                alt="Professional chiropractic care at Vertex Chiropractic"
+            />
             </div>
             <div className="aspect-[3/4] bg-accent-foreground/5 rounded-lg flex items-center justify-center border-2 border-dashed border-accent-foreground/20">
               <span className="text-accent-foreground/60 font-medium text-sm text-center">Equipment<br/>Photo</span>
