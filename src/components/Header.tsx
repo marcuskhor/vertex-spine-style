@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
-import vertexLogo from "@/assets/vertex-logo-new.png";
+import vertexLogo from "@/assets/vertex-logo-updated.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
