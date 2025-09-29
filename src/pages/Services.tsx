@@ -16,32 +16,38 @@ const Services = () => {
     {
       title: "Adults Chiropractic",
       description: "Comprehensive chiropractic care for adults addressing musculoskeletal conditions.",
-      popular: false
+      popular: false,
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     },
     {
       title: "Kids Chiropractic",
       description: "Gentle, specialized care designed for children and adolescents.",
-      popular: false
+      popular: false,
+      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=250&fit=crop&crop=center"
     },
     {
       title: "Prenatal Chiropractic",
       description: "Safe and effective care for expectant mothers throughout pregnancy.",
-      popular: true
+      popular: true,
+      image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=400&h=250&fit=crop&crop=center"
     },
     {
       title: "Dry Needling Therapy",
       description: "Advanced technique targeting trigger points for pain relief.",
-      popular: true
+      popular: true,
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&crop=center"
     },
     {
       title: "Flexion Distraction Therapy",
       description: "Non-surgical treatment for disc problems using specialized equipment.",
-      popular: false
+      popular: false,
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&crop=center"
     },
     {
       title: "Physiotherapy",
       description: "Rehabilitation therapy to restore movement and function.",
-      popular: false
+      popular: false,
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&crop=center"
     }
   ];
 
@@ -71,14 +77,23 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
             {services.map((service, index) => (
-              <Card key={index} className="relative group hover:shadow-primary transition-all duration-300">
+              <Card key={index} className="relative group hover:shadow-primary transition-all duration-300 overflow-hidden">
                 {service.popular && (
-                  <Badge className="absolute -top-2 left-4 bg-secondary text-secondary-foreground">
+                  <Badge className="absolute top-4 right-4 z-10 bg-secondary text-secondary-foreground">
                     <Star className="w-3 h-3 mr-1" />
                     Popular
                   </Badge>
                 )}
                 
+                {/* Service Image */}
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={service.image}
+                    alt={`${service.title} at Vertex Chiropractic`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
                 <CardHeader className="text-center">
                   <CardTitle className="text-xl mb-3">{service.title}</CardTitle>
                   <CardDescription className="text-center">
@@ -93,7 +108,7 @@ const Services = () => {
           <div className="text-center max-w-xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">Ready to Book?</h3>
             <p className="text-muted-foreground mb-6">
-              Schedule your consultation with Dr. Lim today
+              Schedule your consultation with Vertex Chiropractic today
             </p>
             <Button 
               size="lg"
