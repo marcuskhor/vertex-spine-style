@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Practice Info */}
           <div className="lg:col-span-2">
@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-6 pt-6 text-center text-sm text-primary-foreground/70">
+        <div className="border-t border-primary-foreground/20 mt-4 pt-4 text-center text-sm text-primary-foreground/70">
           <p>© 2024 Vertex Chiropractic. All rights reserved. | Professional chiropractic care for optimal health.</p>
         </div>
       </div>
