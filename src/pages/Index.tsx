@@ -25,6 +25,7 @@ import clinicImage4 from "@/assets/IMG_3013.jpg";
 import clinicImage5 from "@/assets/IMG_3441.jpg";
 import clinicImage6 from "@/assets/IMG_5537.jpg";
 import clinicImage7 from "@/assets/IMG_3014.jpg";
+import clinicImage8 from "@/assets/IMG_7366.jpg";
 
 const Index = () => {
   const services = [
@@ -398,6 +399,13 @@ const Index = () => {
               <img 
                 src={clinicImage7} 
                 alt="Therapeutic chiropractic care"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
+            </div>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={clinicImage8} 
+                alt="Happy patient with Dr. Lim at Vertex Chiropractic"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
             </div>
