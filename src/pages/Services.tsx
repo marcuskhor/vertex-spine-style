@@ -15,39 +15,39 @@ const Services = () => {
   const services = [
     {
       icon: Stethoscope,
-      title: "Chiropractic Adjustments",
-      description: "Professional spinal adjustments to restore proper alignment and reduce pain.",
-      features: ["Spinal manipulation", "Joint mobilization", "Pain relief", "Improved mobility"]
-    },
-    {
-      icon: Activity,
-      title: "Physical Therapy",
-      description: "Customized rehabilitation programs to strengthen and restore function.",
-      features: ["Exercise therapy", "Strength training", "Mobility improvement", "Injury prevention"]
-    },
-    {
-      icon: Shield,
-      title: "Sports Medicine",
-      description: "specialized care for athletes and sports-related injuries.",
-      features: ["Sports injury treatment", "Performance optimization", "Recovery protocols", "Prevention strategies"]
+      title: "Adults Chiropractic",
+      description: "Comprehensive chiropractic care for adult patients to address various musculoskeletal conditions.",
+      features: ["Spinal adjustments", "Posture correction", "Pain relief", "Improved mobility"]
     },
     {
       icon: Users,
-      title: "Family Care",
-      description: "Comprehensive chiropractic care for patients of all ages.",
-      features: ["Pediatric care", "Adult treatment", "Senior wellness", "Family plans"]
-    },
-    {
-      icon: Clock,
-      title: "Wellness Programs",
-      description: "Ongoing care plans to maintain optimal health and prevent future issues.",
-      features: ["Maintenance care", "Lifestyle coaching", "Nutritional guidance", "Preventive care"]
+      title: "Kids Chiropractic",
+      description: "Gentle, specialized chiropractic care designed specifically for children and adolescents.",
+      features: ["Pediatric adjustments", "Gentle techniques", "Growth support", "Injury prevention"]
     },
     {
       icon: Heart,
-      title: "Pain Management",
-      description: "Comprehensive approach to managing chronic and acute pain conditions.",
-      features: ["Chronic pain relief", "Acute injury care", "Non-invasive treatments", "Holistic approach"]
+      title: "Prenatal Chiropractic",
+      description: "Safe and effective chiropractic care for expectant mothers throughout pregnancy.",
+      features: ["Pregnancy support", "Pelvic alignment", "Labor preparation", "Postpartum care"]
+    },
+    {
+      icon: Activity,
+      title: "Dry Needling Therapy",
+      description: "Advanced technique using thin needles to target trigger points and muscle tension.",
+      features: ["Trigger point release", "Muscle relaxation", "Pain reduction", "Improved function"]
+    },
+    {
+      icon: Shield,
+      title: "Flexion Distraction Therapy",
+      description: "Non-surgical treatment for disc problems and spinal conditions using specialized equipment.",
+      features: ["Disc decompression", "Spinal mobilization", "Non-invasive treatment", "Pain relief"]
+    },
+    {
+      icon: Clock,
+      title: "Physiotherapy",
+      description: "Rehabilitation therapy to restore movement and function after injury or illness.",
+      features: ["Exercise therapy", "Strength training", "Movement restoration", "Functional improvement"]
     }
   ];
 

@@ -9,6 +9,7 @@ import {
   Star
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import doctorImage from "@/assets/leh.jpg";
 
 const About = () => {
   const values = [
@@ -44,10 +45,10 @@ const About = () => {
   const certifications = [
     "Doctor of Chiropractic (D.C.)",
     "Licensed Chiropractic Physician",
-    "Certified in Sports Medicine",
+    "Certified in Dry Needling Therapy",
     "Advanced Spinal Manipulation",
-    "Physical Therapy Certification",
-    "Nutritional Counseling"
+    "Flexion Distraction Technique",
+    "Prenatal Chiropractic Certification"
   ];
 
   return (
@@ -70,16 +71,16 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Meet Dr. Lim</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                At Vertex Chiropractic, we believe that everyone deserves to live a life free from pain 
+                At Vertex Chiropractic, Dr. Lim believes that everyone deserves to live a life free from pain 
                 and full of vitality. Our mission is to provide comprehensive, personalized chiropractic 
                 care that addresses not just symptoms, but the root cause of your health concerns.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                We combine time-tested chiropractic techniques with modern therapeutic approaches to 
-                deliver the most effective treatment possible. Our goal is to help you achieve optimal 
-                health and maintain it for life.
+                We combine time-tested chiropractic techniques with modern therapeutic approaches including 
+                dry needling and flexion distraction therapy to deliver the most effective treatment possible. 
+                Our goal is to help you achieve optimal health and maintain it for life.
               </p>
               <Button 
                 size="lg" 
@@ -89,8 +90,12 @@ const About = () => {
                 <Link to="/appointments">Start Your Journey</Link>
               </Button>
             </div>
-            <div className="bg-muted rounded-2xl p-8 h-80 flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
-              <span className="text-muted-foreground font-medium">Doctor/Clinic Photo</span>
+            <div className="rounded-2xl overflow-hidden shadow-primary">
+              <img 
+                src={doctorImage} 
+                alt="Dr. Lim - Professional chiropractor at Vertex Chiropractic Center"
+                className="w-full h-96 object-cover"
+              />
             </div>
           </div>
         </div>
@@ -156,8 +161,8 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Professional Credentials</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Our team maintains the highest level of professional qualifications and continues 
-                to advance their knowledge through ongoing education and training.
+                Dr. Lim maintains the highest level of professional qualifications and continues 
+                to advance his knowledge through ongoing education and training in specialized techniques.
               </p>
               
               <div className="space-y-3">
@@ -182,9 +187,9 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <blockquote className="text-lg text-card-foreground/90 mb-4 italic">
-                  "The care I received at Vertex Chiropractic was exceptional. Dr. [Name] took the time 
-                  to understand my condition and created a treatment plan that got me back to my active 
-                  lifestyle. I couldn't be happier with the results."
+                  "The Dr's hands truly magical, with just one treatment, I started coming in with crutches 
+                  and pain and after getting the first treatment I went back without needing crutches again...
+                  It's Amazing & 10 Star for Vertex Chiropractic Center."
                 </blockquote>
                 <div className="flex items-center space-x-2">
                   <div className="flex text-secondary">
@@ -192,7 +197,7 @@ const About = () => {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-muted-foreground">- Sarah Johnson</span>
+                  <span className="text-muted-foreground">- Satisfied Patient</span>
                 </div>
               </CardContent>
             </Card>

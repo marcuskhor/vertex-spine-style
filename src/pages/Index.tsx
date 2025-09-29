@@ -12,6 +12,14 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-chiropractic-new.jpg";
+import doctorImage from "@/assets/leh.jpg";
+import clinicImage1 from "@/assets/IMG_0726.jpg";
+import clinicImage2 from "@/assets/IMG_7368.jpg";
+import clinicImage3 from "@/assets/IMG_1598.jpg";
+import clinicImage4 from "@/assets/IMG_3013.jpg";
+import clinicImage5 from "@/assets/IMG_3441.jpg";
+import clinicImage6 from "@/assets/IMG_5537.jpg";
+import clinicImage7 from "@/assets/IMG_3014.jpg";
 
 const Index = () => {
   const services = [
@@ -43,18 +51,18 @@ const Index = () => {
 
   const testimonials = [
     {
-      text: "Vertex Chiropractic changed my life! After years of back pain, I'm finally pain-free and active again.",
-      author: "Michael Chen",
+      text: "The Dr's hands truly magical, with just one treatment, I started coming in with crutches and pain and after getting the first treatment I went back without needing crutches again...It's Amazing & 10 Star for Vertex Chiropractic Center.",
+      author: "Patient A",
       rating: 5
     },
     {
-      text: "The team is incredibly professional and caring. They truly listen and create treatment plans that work.",
-      author: "Sarah Johnson",
+      text: "I had neck pain, knee pain, back pain. Neck pain relieved after first session which is amazing as i had confition similar as frozen shoulder. After 3-4 sessions with dc eanhou my back and knee getting better and better. I did chiropractic treatment and dry needling.",
+      author: "Patient B",
       rating: 5
     },
     {
-      text: "I was skeptical about chiropractic care, but the results speak for themselves. Highly recommended!",
-      author: "David Rodriguez",
+      text: "喜愛跑步，導致膝蓋疼痛，來了Vertex Chiropractic Center，膝蓋疼痛改善了很多。。謝謝。。",
+      author: "Patient C",
       rating: 5
     }
   ];
@@ -341,49 +349,49 @@ const Index = () => {
             {/* Clinic Photos */}
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
-                src="/src/assets/IMG_0726.JPG" 
-                alt="Dr. Leh providing pediatric chiropractic care"
+                src={clinicImage1} 
+                alt="Dr. Lim providing pediatric chiropractic care"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
             </div>
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
-                src="/src/assets/IMG_7368.JPG" 
+                src={clinicImage2} 
                 alt="Professional chiropractic adjustment treatment"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
             </div>
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
-                src="/src/assets/IMG_1598.JPG" 
+                src={clinicImage3} 
                 alt="Spinal anatomy consultation and education"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
             </div>
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
-                src="/src/assets/IMG_3013.JPG" 
+                src={clinicImage4} 
                 alt="Manual therapy and spinal adjustment"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
             </div>
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
-                src="/src/assets/IMG_3441.JPG" 
+                src={clinicImage5} 
                 alt="Patient consultation and examination"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
             </div>
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
-                src="/src/assets/IMG_5537.JPG" 
+                src={clinicImage6} 
                 alt="Advanced chiropractic treatment techniques"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
             </div>
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
-                src="/src/assets/IMG_3014.JPG" 
+                src={clinicImage7} 
                 alt="Therapeutic chiropractic care"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
@@ -409,14 +417,14 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="aspect-[3/4] rounded-lg mb-4 overflow-hidden shadow-soft">
                   <img 
-                    src="/src/assets/leh.jpg" 
-                    alt="Dr. Leh - Lead Chiropractor at Vertex Chiropractic"
+                    src={doctorImage} 
+                    alt="Dr. Lim - Lead Chiropractor at Vertex Chiropractic"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. Leh</h3>
+                <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. Lim</h3>
                 <p className="text-accent-foreground/70 mb-3">Lead Chiropractor</p>
-                <p className="text-sm text-accent-foreground/80">Specialized in spinal adjustments, sports medicine, and holistic wellness with extensive experience in helping patients achieve optimal health and pain-free living.</p>
+                <p className="text-sm text-accent-foreground/80">Specialized in adults, kids, and prenatal chiropractic care, dry needling therapy, and flexion distraction therapy with extensive experience in helping patients achieve optimal health.</p>
               </CardContent>
             </Card>
           </div>
@@ -429,8 +437,8 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
               <img 
-                src="/src/assets/IMG_1598.JPG" 
-                alt="Dr. Leh explaining spinal health at Vertex Chiropractic clinic"
+                src={clinicImage3} 
+                alt="Dr. Lim explaining spinal health at Vertex Chiropractic clinic"
                 className="w-full h-full object-cover"
               />
             </div>

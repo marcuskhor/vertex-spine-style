@@ -14,11 +14,12 @@ const Appointments = () => {
 
   const services = [
     "Initial Consultation",
-    "Chiropractic Adjustment",
-    "Physical Therapy",
-    "Sports Medicine",
-    "Wellness Program",
-    "Pain Management"
+    "Adults Chiropractic",
+    "Kids Chiropractic", 
+    "Prenatal Chiropractic",
+    "Dry Needling Therapy",
+    "Flexion Distraction Therapy",
+    "Physiotherapy"
   ];
 
   const timeSlots = [
