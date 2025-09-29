@@ -20,13 +20,13 @@ const Header = () => {
   return (
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-6 md:py-8 lg:py-10">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src={vertexLogo} 
               alt="Vertex Chiropractic Center" 
-              className="h-12 w-auto sm:h-16 md:h-20 lg:h-24 xl:h-28"
+              className="h-16 w-auto sm:h-20 md:h-28 lg:h-36 xl:h-40"
             />
           </Link>
 
