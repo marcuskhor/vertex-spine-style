@@ -6,7 +6,17 @@ import {
   CheckCircle,
   Star,
   Calendar,
-  Phone
+  Phone,
+  Users,
+  Baby,
+  Heart,
+  Target,
+  Zap,
+  Activity,
+  Award,
+  Clock,
+  Shield,
+  Sparkles
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import doctorImage from "@/assets/leh.jpg";
@@ -15,154 +25,305 @@ const Services = () => {
   const services = [
     {
       title: "Adults Chiropractic",
-      description: "Comprehensive chiropractic care for adults addressing musculoskeletal conditions.",
+      description: "Comprehensive spinal care for adults addressing back pain, neck pain, and musculoskeletal conditions with proven techniques.",
       popular: false,
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      icon: Users,
+      features: ["Pain Relief", "Posture Correction", "Mobility Enhancement"],
+      duration: "45-60 mins",
+      price: "Starting from RM 150"
     },
     {
       title: "Kids Chiropractic",
-      description: "Gentle, specialized care designed for children and adolescents.",
+      description: "Gentle, specialized pediatric care for growing children with safe, age-appropriate treatment methods.",
       popular: false,
-      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=250&fit=crop&crop=center"
+      icon: Baby,
+      features: ["Growth Support", "Gentle Techniques", "Parent Education"],
+      duration: "30-45 mins",
+      price: "Starting from RM 120"
     },
     {
       title: "Prenatal Chiropractic",
-      description: "Safe and effective care for expectant mothers throughout pregnancy.",
+      description: "Expert care for expectant mothers, supporting comfort and wellness throughout pregnancy journey.",
       popular: true,
-      image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=400&h=250&fit=crop&crop=center"
+      icon: Heart,
+      features: ["Pregnancy Support", "Labor Preparation", "Comfort Enhancement"],
+      duration: "45 mins",
+      price: "Starting from RM 180"
     },
     {
       title: "Dry Needling Therapy",
-      description: "Advanced technique targeting trigger points for pain relief.",
+      description: "Advanced muscle therapy targeting trigger points for immediate pain relief and improved function.",
       popular: true,
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&crop=center"
+      icon: Target,
+      features: ["Trigger Point Release", "Fast Pain Relief", "Muscle Recovery"],
+      duration: "30-45 mins",
+      price: "Starting from RM 200"
     },
     {
-      title: "Flexion Distraction Therapy",
-      description: "Non-surgical treatment for disc problems using specialized equipment.",
+      title: "Flexion Distraction",
+      description: "Specialized non-surgical disc therapy using state-of-the-art equipment for spinal decompression.",
       popular: false,
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&crop=center"
+      icon: Zap,
+      features: ["Disc Therapy", "Non-Surgical", "Spinal Decompression"],
+      duration: "45-60 mins",
+      price: "Starting from RM 220"
     },
     {
       title: "Physiotherapy",
-      description: "Rehabilitation therapy to restore movement and function.",
+      description: "Comprehensive rehabilitation therapy focused on restoring movement, strength, and function.",
       popular: false,
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&crop=center"
+      icon: Activity,
+      features: ["Movement Restoration", "Strength Building", "Injury Prevention"],
+      duration: "60 mins",
+      price: "Starting from RM 160"
     }
   ];
 
   const benefits = [
-    "Licensed & Certified Expertise",
-    "Personalized Treatment Plans", 
-    "Modern Equipment & Techniques",
-    "Proven Track Record"
+    {
+      icon: Award,
+      title: "Licensed Expertise",
+      description: "Certified professionals with advanced training"
+    },
+    {
+      icon: Heart,
+      title: "Personalized Care",
+      description: "Treatment plans tailored to your needs"
+    },
+    {
+      icon: Sparkles,
+      title: "Modern Technology",
+      description: "Latest equipment and proven techniques"
+    },
+    {
+      icon: Shield,
+      title: "Proven Results",
+      description: "Track record of successful outcomes"
+    }
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Clean Hero Section */}
-      <section className="gradient-primary py-24">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-primary-foreground mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-            Professional chiropractic treatments tailored to your needs
-          </p>
+      {/* Modern Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-secondary py-24 lg:py-32">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="relative container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
+              <Sparkles className="w-4 h-4 mr-2" />
+              Professional Healthcare Services
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Transform Your 
+              <span className="text-secondary block">Health Journey</span>
+            </h1>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8 leading-relaxed">
+              Experience expert chiropractic care with personalized treatment plans designed to restore your mobility and enhance your quality of life.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-white/90 shadow-lg text-lg px-8 py-6"
+                asChild
+              >
+                <Link to="/appointments">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Book Consultation
+                </Link>
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6"
+                asChild
+              >
+                <Link to="/contact">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Us Now
+                </Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Services Grid - Clean Design */}
-      <section className="py-20">
+      {/* Services Grid - Enhanced Design */}
+      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-            {services.map((service, index) => (
-              <Card key={index} className="relative group hover:shadow-primary transition-all duration-300 overflow-hidden">
-                {service.popular && (
-                  <Badge className="absolute top-4 right-4 z-10 bg-secondary text-secondary-foreground">
-                    <Star className="w-3 h-3 mr-1" />
-                    Popular
-                  </Badge>
-                )}
-                
-                {/* Service Image */}
-                <div className="h-48 overflow-hidden">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Specialized Services</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Comprehensive care solutions tailored to meet your unique health needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <Card 
+                  key={index} 
+                  className="group relative overflow-hidden border-2 hover:border-primary/20 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-gradient-to-br from-background to-muted/20"
+                >
+                  {service.popular && (
+                    <div className="absolute -top-2 -right-2 z-10">
+                      <Badge className="bg-secondary text-white shadow-lg px-3 py-1 rounded-full">
+                        <Star className="w-3 h-3 mr-1 fill-current" />
+                        Popular
+                      </Badge>
+                    </div>
+                  )}
+                  
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                        <IconComponent className="w-6 h-6 text-primary" />
+                      </div>
+                      <div className="text-right">
+                        <div className="text-sm text-muted-foreground flex items-center">
+                          <Clock className="w-3 h-3 mr-1" />
+                          {service.duration}
+                        </div>
+                      </div>
+                    </div>
+                    <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-sm leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardContent className="pt-0">
+                    <div className="space-y-4">
+                      <div className="flex flex-wrap gap-2">
+                        {service.features.map((feature, idx) => (
+                          <Badge key={idx} variant="secondary" className="text-xs">
+                            {feature}
+                          </Badge>
+                        ))}
+                      </div>
+                      
+                      <div className="flex items-center justify-between pt-4 border-t">
+                        <div className="text-lg font-semibold text-primary">
+                          {service.price}
+                        </div>
+                        <Button 
+                          size="sm" 
+                          className="group-hover:shadow-md transition-shadow"
+                          asChild
+                        >
+                          <Link to="/appointments">
+                            Book Now
+                            <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Why Choose Us */}
+      <section className="py-20 bg-gradient-to-r from-primary/5 via-background to-secondary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Vertex Chiropractic?</h2>
+              <p className="text-muted-foreground text-lg">
+                Experience the difference with our comprehensive approach to healthcare
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {benefits.map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                return (
+                  <Card key={index} className="text-center p-6 hover:shadow-lg transition-all duration-300 border-0 bg-white/80">
+                    <div className="p-4 rounded-full bg-primary/10 w-fit mx-auto mb-4">
+                      <IconComponent className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="font-semibold mb-2">{benefit.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </Card>
+                );
+              })}
+            </div>
+
+            {/* Enhanced Doctor Section */}
+            <Card className="p-8 bg-gradient-to-r from-white to-muted/30 border-2 border-primary/10 shadow-xl">
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg flex-shrink-0">
                   <img 
-                    src={service.image}
-                    alt={`${service.title} at Vertex Chiropractic`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    src={doctorImage} 
+                    alt="Dr. Lim - Lead Chiropractor at Vertex Chiropractic"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-
-                <CardHeader className="text-center">
-                  <CardTitle className="text-xl mb-3">{service.title}</CardTitle>
-                  <CardDescription className="text-center">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-
-          {/* Single CTA */}
-          <div className="text-center max-w-xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Ready to Book?</h3>
-            <p className="text-muted-foreground mb-6">
-              Schedule your consultation with Vertex Chiropractic today
-            </p>
-            <Button 
-              size="lg"
-              className="gradient-primary text-primary-foreground mb-4"
-              asChild
-            >
-              <Link to="/appointments">
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Appointment
-              </Link>
-            </Button>
-            <div className="text-sm text-muted-foreground">
-              Call: <a href="tel:+60128286173" className="text-primary font-medium">012-828 6173</a>
-            </div>
+                <div className="flex-1 text-center lg:text-left">
+                  <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
+                    <h3 className="text-2xl font-bold">Dr. Lim</h3>
+                    <Badge className="bg-primary/10 text-primary">Lead Chiropractor</Badge>
+                  </div>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    With over 10 years of experience, Dr. Lim specializes in comprehensive chiropractic care for all ages. 
+                    Certified in advanced techniques including dry needling and flexion distraction therapy, 
+                    providing evidence-based treatment for optimal patient outcomes.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <Button asChild>
+                      <Link to="/about">
+                        Learn More About Dr. Lim
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <Link to="/appointments">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Book with Dr. Lim
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us - Simplified */}
-      <section className="bg-muted py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Why Choose Vertex Chiropractic?</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center justify-center text-center">
-                  <div>
-                    <CheckCircle className="w-6 h-6 text-secondary mx-auto mb-2" />
-                    <span className="text-sm font-medium">{benefit}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-12 p-6 bg-white rounded-lg shadow-soft flex items-center gap-6">
-              <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
-                <img 
-                  src={doctorImage} 
-                  alt="Dr. Lim - Chiropractor at Vertex Chiropractic"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex-1 text-left">
-                <h3 className="text-xl font-semibold mb-3">Dr. Lim</h3>
-                <p className="text-muted-foreground mb-4">
-                  Experienced chiropractor specializing in adults, kids, and prenatal care with advanced certifications in dry needling and flexion distraction therapy.
-                </p>
-                <Button variant="outline" asChild>
-                  <Link to="/about">
-                    Learn More About Dr. Lim
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
+      {/* Call to Action Section */}
+      <section className="py-16 bg-gradient-to-r from-primary to-secondary">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Start Your Healing Journey?
+            </h2>
+            <p className="text-white/90 text-lg mb-8 leading-relaxed">
+              Take the first step towards better health. Our expert team is ready to provide 
+              personalized care that addresses your specific needs and goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
+                asChild
+              >
+                <Link to="/appointments">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Schedule Appointment
+                </Link>
+              </Button>
+              <div className="flex items-center justify-center gap-2 text-white">
+                <Phone className="w-5 h-5" />
+                <span className="text-lg">
+                  Or call: <a href="tel:+60128286173" className="font-semibold underline hover:no-underline">012-828 6173</a>
+                </span>
               </div>
             </div>
           </div>
