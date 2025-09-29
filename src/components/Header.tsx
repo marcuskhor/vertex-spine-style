@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import vertexLogo from "@/assets/vertex-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,16 +21,14 @@ const Header = () => {
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          {/* Logo Space */}
-          <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
-              <span className="text-xs text-muted-foreground font-medium">LOGO</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-primary">Vertex Chiropractic</h1>
-              <p className="text-sm text-muted-foreground">Professional Care</p>
-            </div>
-          </div>
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src={vertexLogo} 
+              alt="Vertex Chiropractic Center" 
+              className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

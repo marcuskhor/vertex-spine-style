@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import vertexLogo from "@/assets/vertex-logo.png";
 
 const Footer = () => {
   const navigation = [
@@ -16,15 +17,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Practice Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="w-12 h-12 bg-primary-foreground/10 rounded-lg flex items-center justify-center border-2 border-dashed border-primary-foreground/30">
-                <span className="text-xs text-primary-foreground/70 font-medium">LOGO</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Vertex Chiropractic</h3>
-                <p className="text-primary-foreground/70">Professional Chiropractic Care</p>
-              </div>
-            </div>
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src={vertexLogo} 
+                alt="Vertex Chiropractic Center" 
+                className="h-12 w-auto sm:h-14 md:h-16 brightness-0 invert"
+              />
+            </Link>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
               Dedicated to providing exceptional chiropractic care and helping our patients 
               achieve optimal health and wellness through natural, effective treatments.
