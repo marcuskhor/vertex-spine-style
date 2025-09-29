@@ -8,7 +8,12 @@ import {
   ArrowRight, 
   CheckCircle,
   Star,
-  Calendar
+  Calendar,
+  Stethoscope,
+  Activity,
+  Shield,
+  Clock,
+  Baby
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-chiropractic-new.jpg";
@@ -146,19 +151,59 @@ const Index = () => {
             <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
               <CardHeader>
                 <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <Stethoscope className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Adults Chiropractic</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Comprehensive chiropractic care for adult patients to address various musculoskeletal conditions.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Spinal adjustments</li>
+                  <li>• Posture correction</li>
+                  <li>• Pain relief</li>
+                  <li>• Improved mobility</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <Baby className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Kids Chiropractic</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Gentle, specialized chiropractic care designed specifically for children and adolescents.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Pediatric adjustments</li>
+                  <li>• Gentle techniques</li>
+                  <li>• Growth support</li>
+                  <li>• Injury prevention</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
                   <Heart className="w-8 h-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl text-foreground">Spinal Adjustments</CardTitle>
+                <CardTitle className="text-xl text-foreground">Prenatal Chiropractic</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground mb-4">
-                  Professional spinal manipulation to restore proper alignment, reduce pain, and improve mobility for lasting relief.
+                  Safe and effective chiropractic care for expectant mothers throughout pregnancy.
                 </CardDescription>
                 <ul className="text-sm text-muted-foreground space-y-1 text-left">
-                  <li>• Manual spinal manipulation</li>
-                  <li>• Joint mobilization</li>
-                  <li>• Posture correction</li>
-                  <li>• Pain relief techniques</li>
+                  <li>• Pregnancy support</li>
+                  <li>• Pelvic alignment</li>
+                  <li>• Labor preparation</li>
+                  <li>• Postpartum care</li>
                 </ul>
               </CardContent>
             </Card>
@@ -166,99 +211,59 @@ const Index = () => {
             <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
               <CardHeader>
                 <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
-                  <Users className="w-8 h-8 text-primary" />
+                  <Activity className="w-8 h-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl text-foreground">Physical Therapy</CardTitle>
+                <CardTitle className="text-xl text-foreground">Dry Needling Therapy</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground mb-4">
-                  Customized rehabilitation programs combining exercise therapy and strengthening for optimal recovery.
+                  Advanced technique using thin needles to target trigger points and muscle tension.
                 </CardDescription>
                 <ul className="text-sm text-muted-foreground space-y-1 text-left">
-                  <li>• Therapeutic exercises</li>
+                  <li>• Trigger point release</li>
+                  <li>• Muscle relaxation</li>
+                  <li>• Pain reduction</li>
+                  <li>• Improved function</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <Shield className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Flexion Distraction Therapy</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Non-surgical treatment for disc problems and spinal conditions using specialized equipment.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Disc decompression</li>
+                  <li>• Spinal mobilization</li>
+                  <li>• Non-invasive treatment</li>
+                  <li>• Pain relief</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
+              <CardHeader>
+                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
+                  <Clock className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Physiotherapy</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                  Rehabilitation therapy to restore movement and function after injury or illness.
+                </CardDescription>
+                <ul className="text-sm text-muted-foreground space-y-1 text-left">
+                  <li>• Exercise therapy</li>
                   <li>• Strength training</li>
-                  <li>• Flexibility improvement</li>
-                  <li>• Injury rehabilitation</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
-              <CardHeader>
-                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
-                  <Award className="w-8 h-8 text-primary" />
-                </div>
-                <CardTitle className="text-xl text-foreground">Sports Medicine</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground mb-4">
-                  Specialized treatment for athletes and active individuals, focusing on performance enhancement and injury prevention.
-                </CardDescription>
-                <ul className="text-sm text-muted-foreground space-y-1 text-left">
-                  <li>• Sports injury treatment</li>
-                  <li>• Performance optimization</li>
-                  <li>• Recovery protocols</li>
-                  <li>• Prevention strategies</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
-              <CardHeader>
-                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
-                  <CheckCircle className="w-8 h-8 text-primary" />
-                </div>
-                <CardTitle className="text-xl text-foreground">Wellness Programs</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground mb-4">
-                  Comprehensive wellness plans including lifestyle coaching and preventive care for long-term health.
-                </CardDescription>
-                <ul className="text-sm text-muted-foreground space-y-1 text-left">
-                  <li>• Maintenance care plans</li>
-                  <li>• Lifestyle coaching</li>
-                  <li>• Nutritional guidance</li>
-                  <li>• Preventive treatments</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
-              <CardHeader>
-                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
-                  <Star className="w-8 h-8 text-primary" />
-                </div>
-                <CardTitle className="text-xl text-foreground">Pain Management</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground mb-4">
-                  Advanced techniques for managing chronic pain conditions through natural, non-invasive treatments.
-                </CardDescription>
-                <ul className="text-sm text-muted-foreground space-y-1 text-left">
-                  <li>• Chronic pain relief</li>
-                  <li>• Acute injury care</li>
-                  <li>• Non-invasive treatments</li>
-                  <li>• Holistic approach</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center shadow-soft hover:shadow-primary transition-smooth border-border/50 group">
-              <CardHeader>
-                <div className="w-16 h-16 gradient-healing rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-bounce">
-                  <Phone className="w-8 h-8 text-primary" />
-                </div>
-                <CardTitle className="text-xl text-foreground">Consultation Services</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground mb-4">
-                  Professional consultations including health assessments and personalized treatment planning.
-                </CardDescription>
-                <ul className="text-sm text-muted-foreground space-y-1 text-left">
-                  <li>• Comprehensive assessments</li>
-                  <li>• Treatment planning</li>
-                  <li>• Progress monitoring</li>
-                  <li>• Health education</li>
+                  <li>• Movement restoration</li>
+                  <li>• Functional improvement</li>
                 </ul>
               </CardContent>
             </Card>
