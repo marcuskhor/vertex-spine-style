@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import vertexLogo from "@/assets/vertex-logo.png";
+import vertexLogo from "@/assets/vertex-logo-new.png";
 
 const Footer = () => {
   const navigation = [
@@ -21,7 +21,7 @@ const Footer = () => {
               <img 
                 src={vertexLogo} 
                 alt="Vertex Chiropractic Center" 
-                className="h-20 w-auto sm:h-24 md:h-32 lg:h-36 brightness-0 invert"
+                className="h-20 w-auto sm:h-24 md:h-32 lg:h-36"
               />
             </Link>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
