@@ -9,49 +9,38 @@ import {
   Phone
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import doctorImage from "@/assets/leh.jpg";
 
 const Services = () => {
   const services = [
     {
       title: "Adults Chiropractic",
       description: "Comprehensive chiropractic care for adults addressing musculoskeletal conditions.",
-      price: "RM 120",
-      duration: "45-60 min",
       popular: false
     },
     {
       title: "Kids Chiropractic",
       description: "Gentle, specialized care designed for children and adolescents.",
-      price: "RM 90",
-      duration: "30-45 min",
       popular: false
     },
     {
       title: "Prenatal Chiropractic",
       description: "Safe and effective care for expectant mothers throughout pregnancy.",
-      price: "RM 140",
-      duration: "45-60 min",
       popular: true
     },
     {
       title: "Dry Needling Therapy",
       description: "Advanced technique targeting trigger points for pain relief.",
-      price: "RM 100",
-      duration: "30-45 min",
       popular: true
     },
     {
       title: "Flexion Distraction Therapy",
       description: "Non-surgical treatment for disc problems using specialized equipment.",
-      price: "RM 150",
-      duration: "45-60 min",
       popular: false
     },
     {
       title: "Physiotherapy",
       description: "Rehabilitation therapy to restore movement and function.",
-      price: "RM 110",
-      duration: "60-90 min",
       popular: false
     }
   ];
@@ -90,12 +79,8 @@ const Services = () => {
                   </Badge>
                 )}
                 
-                <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                  <div className="flex justify-center items-center gap-4 mb-3">
-                    <span className="text-2xl font-bold text-primary">{service.price}</span>
-                    <span className="text-sm text-muted-foreground">{service.duration}</span>
-                  </div>
+                <CardHeader className="text-center">
+                  <CardTitle className="text-xl mb-3">{service.title}</CardTitle>
                   <CardDescription className="text-center">
                     {service.description}
                   </CardDescription>
@@ -144,17 +129,26 @@ const Services = () => {
               ))}
             </div>
 
-            <div className="mt-12 p-6 bg-white rounded-lg shadow-soft">
-              <h3 className="text-xl font-semibold mb-3">Dr. Lim</h3>
-              <p className="text-muted-foreground mb-4">
-                Experienced chiropractor specializing in adults, kids, and prenatal care with advanced certifications in dry needling and flexion distraction therapy.
-              </p>
-              <Button variant="outline" asChild>
-                <Link to="/about">
-                  Learn More About Dr. Lim
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
+            <div className="mt-12 p-6 bg-white rounded-lg shadow-soft flex items-center gap-6">
+              <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                <img 
+                  src={doctorImage} 
+                  alt="Dr. Lim - Chiropractor at Vertex Chiropractic"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1 text-left">
+                <h3 className="text-xl font-semibold mb-3">Dr. Lim</h3>
+                <p className="text-muted-foreground mb-4">
+                  Experienced chiropractor specializing in adults, kids, and prenatal care with advanced certifications in dry needling and flexion distraction therapy.
+                </p>
+                <Button variant="outline" asChild>
+                  <Link to="/about">
+                    Learn More About Dr. Lim
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
