@@ -231,11 +231,11 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-accent-foreground mb-6">
-                Why Choose Dr. Lim's Services?
+                Why Choose Vertex Chiropractic?
               </h2>
               <p className="text-lg text-accent-foreground/80 mb-8">
-                With years of specialized training and experience, Dr. Lim combines traditional chiropractic 
-                techniques with modern therapeutic approaches to provide the most effective treatment possible.
+                At Vertex Chiropractic, Dr. Lim combines years of specialized training and experience with 
+                traditional chiropractic techniques and modern therapeutic approaches to provide the most effective treatment possible.
               </p>
               
               <div className="space-y-4">
