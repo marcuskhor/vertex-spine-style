@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-6 md:py-8 lg:py-10">
+        <div className="flex items-center justify-between py-2 md:py-3">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
@@ -73,7 +73,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-2 border-t border-border">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
