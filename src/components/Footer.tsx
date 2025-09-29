@@ -21,7 +21,7 @@ const Footer = () => {
               <img 
                 src={vertexLogo} 
                 alt="Vertex Chiropractic Center" 
-                className="h-20 w-auto sm:h-24 md:h-32 lg:h-36"
+                className="h-12 w-auto sm:h-14 md:h-16"
               />
             </Link>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
