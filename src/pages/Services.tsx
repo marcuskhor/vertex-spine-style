@@ -21,64 +21,58 @@ import { Link } from "react-router-dom";
 const Services = () => {
   const services = [
     {
-      icon: Stethoscope,
       title: "Adults Chiropractic",
       description: "Comprehensive chiropractic care for adult patients to address various musculoskeletal conditions and restore optimal health.",
       features: ["Spinal adjustments", "Posture correction", "Pain relief", "Improved mobility"],
       duration: "45-60 mins",
       price: "From RM 120",
       popular: false,
-      gradient: "from-blue-500 to-cyan-500"
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop"
     },
     {
-      icon: Baby,
       title: "Kids Chiropractic",
       description: "Gentle, specialized chiropractic care designed specifically for children and adolescents with growing bodies.",
       features: ["Pediatric adjustments", "Gentle techniques", "Growth support", "Injury prevention"],
       duration: "30-45 mins",
       price: "From RM 90",
       popular: false,
-      gradient: "from-pink-500 to-rose-500"
+      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=500&h=300&fit=crop"
     },
     {
-      icon: Heart,
       title: "Prenatal Chiropractic",
       description: "Safe and effective chiropractic care for expectant mothers throughout pregnancy and postpartum recovery.",
       features: ["Pregnancy support", "Pelvic alignment", "Labor preparation", "Postpartum care"],
       duration: "45-60 mins",
       price: "From RM 140",
       popular: true,
-      gradient: "from-purple-500 to-pink-500"
+      image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=500&h=300&fit=crop"
     },
     {
-      icon: Activity,
       title: "Dry Needling Therapy",
       description: "Advanced technique using thin needles to target trigger points and muscle tension for pain relief.",
       features: ["Trigger point release", "Muscle relaxation", "Pain reduction", "Improved function"],
       duration: "30-45 mins",
       price: "From RM 100",
       popular: true,
-      gradient: "from-orange-500 to-red-500"
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop"
     },
     {
-      icon: Shield,
       title: "Flexion Distraction Therapy",
       description: "Non-surgical treatment for disc problems and spinal conditions using specialized equipment and techniques.",
       features: ["Disc decompression", "Spinal mobilization", "Non-invasive treatment", "Pain relief"],
       duration: "45-60 mins",
       price: "From RM 150",
       popular: false,
-      gradient: "from-green-500 to-emerald-500"
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=300&fit=crop"
     },
     {
-      icon: Clock,
       title: "Physiotherapy",
       description: "Rehabilitation therapy to restore movement and function after injury or illness through targeted exercises.",
       features: ["Exercise therapy", "Strength training", "Movement restoration", "Functional improvement"],
       duration: "60-90 mins",
       price: "From RM 110",
       popular: false,
-      gradient: "from-indigo-500 to-blue-500"
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop"
     }
   ];
 
@@ -148,14 +142,26 @@ const Services = () => {
                   </div>
                 )}
                 
-                {/* Gradient Header */}
-                <div className={`h-32 bg-gradient-to-r ${service.gradient} relative`}>
-                  <div className="absolute inset-0 bg-black/10"></div>
-                  <div className="absolute bottom-4 left-6">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
+            {services.map((service, index) => (
+              <Card key={index} className="group relative overflow-hidden shadow-soft hover:shadow-primary transition-all duration-300 border-0">
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className="absolute top-4 right-4 z-10">
+                    <Badge className="bg-secondary text-secondary-foreground font-semibold">
+                      <Star className="w-3 h-3 mr-1" />
+                      Popular
+                    </Badge>
                   </div>
+                )}
+                
+                {/* Service Image */}
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={service.image}
+                    alt={`${service.title} treatment at Vertex Chiropractic`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
 
                 <CardHeader className="pb-4">
@@ -175,7 +181,7 @@ const Services = () => {
 
                 <CardContent className="pt-0">
                   {/* Features List */}
-                  <div className="grid grid-cols-2 gap-3 mb-6">
+                  <div className="grid grid-cols-2 gap-3">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm">
                         <CheckCircle className="w-4 h-4 text-secondary mr-2 flex-shrink-0" />
@@ -183,30 +189,36 @@ const Services = () => {
                       </div>
                     ))}
                   </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-3">
-                    <Button 
-                      className="flex-1 gradient-primary border-0 text-primary-foreground hover:scale-105 transition-transform"
-                      asChild
-                    >
-                      <Link to="/appointments">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        Book Now
-                      </Link>
-                    </Button>
-                    <Button 
-                      variant="outline"
-                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                      asChild
-                    >
-                      <Link to="/contact">
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-                    </Button>
-                  </div>
                 </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Single Book Now Section */}
+          <div className="text-center">
+            <div className="max-w-2xl mx-auto mb-8">
+              <h3 className="text-3xl font-bold text-foreground mb-4">
+                Ready to Book Your Treatment?
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Choose any of our specialized services and take the first step towards better health. 
+                Dr. Lim will create a personalized treatment plan just for you.
+              </p>
+            </div>
+            <Button 
+              size="lg"
+              className="gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-transform px-12 py-4 text-lg"
+              asChild
+            >
+              <Link to="/appointments">
+                <Calendar className="w-6 h-6 mr-3" />
+                Book Your Appointment Now
+              </Link>
+            </Button>
+            <div className="mt-4 text-muted-foreground">
+              Or call us directly: <a href="tel:+60128286173" className="text-primary font-semibold hover:underline">012-828 6173</a>
+            </div>
+          </div>
               </Card>
             ))}
           </div>
