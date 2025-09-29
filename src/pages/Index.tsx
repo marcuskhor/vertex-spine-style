@@ -57,17 +57,17 @@ const Index = () => {
   const testimonials = [
     {
       text: "The Dr's hands truly magical, with just one treatment, I started coming in with crutches and pain and after getting the first treatment I went back without needing crutches again...It's Amazing & 10 Star for Vertex Chiropractic Center.",
-      author: "Patient A",
+      author: "Hasbullah Mokthsim",
       rating: 5
     },
     {
       text: "I had neck pain, knee pain, back pain. Neck pain relieved after first session which is amazing as i had confition similar as frozen shoulder. After 3-4 sessions with dc eanhou my back and knee getting better and better. I did chiropractic treatment and dry needling.",
-      author: "Patient B",
+      author: "yean Alysser",
       rating: 5
     },
     {
       text: "喜愛跑步，導致膝蓋疼痛，來了Vertex Chiropractic Center，膝蓋疼痛改善了很多。。謝謝。。",
-      author: "Patient C",
+      author: "Nic Jin",
       rating: 5
     }
   ];
