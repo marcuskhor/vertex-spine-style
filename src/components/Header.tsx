@@ -26,7 +26,7 @@ const Header = () => {
             <img 
               src={vertexLogo} 
               alt="Vertex Chiropractic Center" 
-              className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
+              className="h-12 w-auto sm:h-16 md:h-20 lg:h-24 xl:h-28"
             />
           </Link>
 
