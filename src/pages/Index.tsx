@@ -62,7 +62,7 @@ const Index = () => {
     },
     {
       text: "I had neck pain, knee pain, back pain. Neck pain relieved after first session which is amazing as i had confition similar as frozen shoulder. After 3-4 sessions with dc eanhou my back and knee getting better and better. I did chiropractic treatment and dry needling.",
-      author: "yean Alysser",
+      author: "Yean Alysser",
       rating: 5
     },
     {
