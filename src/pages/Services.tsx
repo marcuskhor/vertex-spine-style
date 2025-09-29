@@ -322,7 +322,7 @@ const Services = () => {
               <div className="flex items-center justify-center gap-2 text-white">
                 <Phone className="w-5 h-5" />
                 <span className="text-lg">
-                  Or call: <a href="tel:+60128286173" className="font-semibold underline hover:no-underline">012-828 6173</a>
+                  Or WhatsApp: <a href="https://wa.me/60128286173?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Vertex%20Chiropractic" target="_blank" rel="noopener noreferrer" className="font-semibold underline hover:no-underline">012-828 6173</a>
                 </span>
               </div>
             </div>

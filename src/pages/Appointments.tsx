@@ -217,7 +217,7 @@ const Appointments = () => {
                     Need Help?
                   </CardTitle>
                   <CardDescription>
-                    Call us directly to schedule or ask questions
+                    WhatsApp us directly to schedule or ask questions
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -234,9 +234,9 @@ const Appointments = () => {
                       className="w-full gradient-primary border-0 text-primary-foreground shadow-primary"
                       asChild
                     >
-                      <a href="tel:+60128286173">
+                      <a href="https://wa.me/60128286173?text=Hello%2C%20I%20would%20like%20to%20schedule%20an%20appointment%20at%20Vertex%20Chiropractic" target="_blank" rel="noopener noreferrer">
                         <Phone className="w-4 h-4 mr-2" />
-                        Call Now
+                        WhatsApp Us
                       </a>
                     </Button>
                   </div>

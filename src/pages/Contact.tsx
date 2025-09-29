@@ -178,16 +178,16 @@ const Contact = () => {
                   </h3>
                   <p className="text-accent-foreground/80 mb-6">
                     For urgent matters or to schedule an appointment right away, 
-                    give us a call or book online.
+                    message us on WhatsApp or book online.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button 
                       className="gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce"
                       asChild
                     >
-                      <a href="tel:+60128286173">
+                      <a href="https://wa.me/60128286173?text=Hello%2C%20I%20have%20an%20urgent%20matter%20and%20would%20like%20to%20contact%20Vertex%20Chiropractic" target="_blank" rel="noopener noreferrer">
                         <Phone className="w-4 h-4 mr-2" />
-                        Call Now
+                        WhatsApp Us
                       </a>
                     </Button>
                     <Button 
