@@ -18,6 +18,13 @@ import {
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-chiropractic-new.jpg";
 import doctorImage from "@/assets/leh.jpg";
+import clinicImage1 from "@/assets/IMG_0726.jpg";
+import clinicImage2 from "@/assets/IMG_7368.jpg";
+import clinicImage3 from "@/assets/IMG_1598.jpg";
+import clinicImage4 from "@/assets/IMG_3013.jpg";
+import clinicImage5 from "@/assets/IMG_3441.jpg";
+import clinicImage6 from "@/assets/IMG_5537.jpg";
+import clinicImage7 from "@/assets/IMG_3014.jpg";
 
 const Index = () => {
   const services = [
@@ -345,26 +352,54 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {/* Clinic Photos */}
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground font-medium">Dr. Lim with Patient</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={clinicImage1} 
+                alt="Dr. Lim providing pediatric chiropractic care"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground font-medium">Treatment Session</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={clinicImage2} 
+                alt="Professional chiropractic adjustment treatment"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground font-medium">Consultation Room</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={clinicImage3} 
+                alt="Spinal anatomy consultation and education"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground font-medium">Therapy Equipment</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={clinicImage4} 
+                alt="Manual therapy and spinal adjustment"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground font-medium">Patient Care</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={clinicImage5} 
+                alt="Patient consultation and examination"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground font-medium">Clinic Facility</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={clinicImage6} 
+                alt="Advanced chiropractic treatment techniques"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground font-medium">Treatment Area</span>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
+              <img 
+                src={clinicImage7} 
+                alt="Therapeutic chiropractic care"
+                className="w-full h-full object-cover hover:scale-105 transition-smooth"
+              />
             </div>
           </div>
         </div>
@@ -406,9 +441,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
-              <div className="bg-muted rounded-2xl p-8 h-80 flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
-                <span className="text-muted-foreground font-medium">Dr. Lim Consultation Photo</span>
-              </div>
+              <img 
+                src={clinicImage3} 
+                alt="Dr. Lim explaining spinal health at Vertex Chiropractic clinic"
+                className="w-full h-full object-cover"
+              />
             </div>
             
             <div>
