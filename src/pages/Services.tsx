@@ -153,12 +153,12 @@ const Services = () => {
                   className="group relative overflow-hidden border-2 hover:border-primary/20 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-gradient-to-br from-background to-muted/20"
                 >
                   {service.popular && (
-                    <div className="absolute -top-3 -right-3 z-10 animate-fade-in">
+                    <div className="absolute -top-4 -right-4 z-20 animate-fade-in">
                       <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary rounded-full blur-sm opacity-75 animate-pulse"></div>
-                        <Badge className="relative bg-gradient-to-r from-secondary to-primary text-white shadow-xl px-4 py-1.5 rounded-full font-semibold border-2 border-white/20">
-                          <Star className="w-3.5 h-3.5 mr-1.5 fill-current animate-pulse" />
-                          Popular
+                        <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary rounded-full blur-md opacity-75 animate-pulse"></div>
+                        <Badge className="relative bg-gradient-to-r from-secondary to-primary text-white shadow-2xl px-5 py-2 rounded-full font-bold text-sm border-2 border-white">
+                          <Star className="w-4 h-4 mr-1.5 fill-current" />
+                          POPULAR
                         </Badge>
                       </div>
                     </div>
