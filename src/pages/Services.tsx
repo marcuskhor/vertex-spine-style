@@ -150,7 +150,7 @@ const Services = () => {
               return (
                 <Card 
                   key={index} 
-                  className="group relative overflow-hidden border-2 hover:border-primary/20 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-gradient-to-br from-background to-muted/20"
+                  className="group relative border-2 hover:border-primary/20 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-gradient-to-br from-background to-muted/20"
                 >
                   {service.popular && (
                     <div className="absolute -top-3 -right-3 z-10 animate-fade-in">
