@@ -14,7 +14,6 @@ import {
   Zap,
   Activity,
   Award,
-  Clock,
   Shield,
   Sparkles
 } from "lucide-react";
@@ -28,54 +27,42 @@ const Services = () => {
       description: "Comprehensive spinal care for adults addressing back pain, neck pain, and musculoskeletal conditions with proven techniques.",
       popular: false,
       icon: Users,
-      features: ["Pain Relief", "Posture Correction", "Mobility Enhancement"],
-      duration: "45-60 mins",
-      price: "Starting from RM 150"
+      features: ["Pain Relief", "Posture Correction", "Mobility Enhancement"]
     },
     {
       title: "Kids Chiropractic",
       description: "Gentle, specialized pediatric care for growing children with safe, age-appropriate treatment methods.",
       popular: false,
       icon: Baby,
-      features: ["Growth Support", "Gentle Techniques", "Parent Education"],
-      duration: "30-45 mins",
-      price: "Starting from RM 120"
+      features: ["Growth Support", "Gentle Techniques", "Parent Education"]
     },
     {
       title: "Prenatal Chiropractic",
       description: "Expert care for expectant mothers, supporting comfort and wellness throughout pregnancy journey.",
       popular: true,
       icon: Heart,
-      features: ["Pregnancy Support", "Labor Preparation", "Comfort Enhancement"],
-      duration: "45 mins",
-      price: "Starting from RM 180"
+      features: ["Pregnancy Support", "Labor Preparation", "Comfort Enhancement"]
     },
     {
       title: "Dry Needling Therapy",
       description: "Advanced muscle therapy targeting trigger points for immediate pain relief and improved function.",
       popular: true,
       icon: Target,
-      features: ["Trigger Point Release", "Fast Pain Relief", "Muscle Recovery"],
-      duration: "30-45 mins",
-      price: "Starting from RM 200"
+      features: ["Trigger Point Release", "Fast Pain Relief", "Muscle Recovery"]
     },
     {
       title: "Flexion Distraction",
       description: "Specialized non-surgical disc therapy using state-of-the-art equipment for spinal decompression.",
       popular: false,
       icon: Zap,
-      features: ["Disc Therapy", "Non-Surgical", "Spinal Decompression"],
-      duration: "45-60 mins",
-      price: "Starting from RM 220"
+      features: ["Disc Therapy", "Non-Surgical", "Spinal Decompression"]
     },
     {
       title: "Physiotherapy",
       description: "Comprehensive rehabilitation therapy focused on restoring movement, strength, and function.",
       popular: false,
       icon: Activity,
-      features: ["Movement Restoration", "Strength Building", "Injury Prevention"],
-      duration: "60 mins",
-      price: "Starting from RM 160"
+      features: ["Movement Restoration", "Strength Building", "Injury Prevention"]
     }
   ];
 
@@ -175,15 +162,9 @@ const Services = () => {
                   )}
                   
                   <CardHeader className="pb-4">
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center mb-4">
                       <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
                         <IconComponent className="w-6 h-6 text-primary" />
-                      </div>
-                      <div className="text-right">
-                        <div className="text-sm text-muted-foreground flex items-center">
-                          <Clock className="w-3 h-3 mr-1" />
-                          {service.duration}
-                        </div>
                       </div>
                     </div>
                     <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
@@ -196,7 +177,7 @@ const Services = () => {
 
                   <CardContent className="pt-0">
                     <div className="space-y-4">
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mb-4">
                         {service.features.map((feature, idx) => (
                           <Badge key={idx} variant="secondary" className="text-xs">
                             {feature}
@@ -204,21 +185,16 @@ const Services = () => {
                         ))}
                       </div>
                       
-                      <div className="flex items-center justify-between pt-4 border-t">
-                        <div className="text-lg font-semibold text-primary">
-                          {service.price}
-                        </div>
-                        <Button 
-                          size="sm" 
-                          className="group-hover:shadow-md transition-shadow"
-                          asChild
-                        >
-                          <Link to="/appointments">
-                            Book Now
-                            <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                          </Link>
-                        </Button>
-                      </div>
+                      <Button 
+                        size="sm" 
+                        className="w-full group-hover:shadow-md transition-shadow"
+                        asChild
+                      >
+                        <Link to="/appointments">
+                          Book Now
+                          <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
