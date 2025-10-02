@@ -23,46 +23,46 @@ import doctorImage from "@/assets/leh.jpg";
 const Services = () => {
   const services = [
     {
-      title: "Adults Chiropractic",
-      description: "Comprehensive spinal care for adults addressing back pain, neck pain, and musculoskeletal conditions with proven techniques.",
+      title: "Adults Chiropractic Treatment",
+      description: "At Vertex Chiropractic, we focus on identifying the root cause of your discomfort, not just the symptoms. Using gentle, targeted adjustments, we help restore proper spinal alignment and function so your body can heal and perform at its best.",
       popular: false,
       icon: Users,
-      features: ["Pain Relief", "Posture Correction", "Mobility Enhancement"]
+      features: ["Root Cause Focus", "Spinal Alignment", "Optimal Function"]
     },
     {
-      title: "Kids Chiropractic",
-      description: "Gentle, specialized pediatric care for growing children with safe, age-appropriate treatment methods.",
+      title: "Paediatrics Chiropractic Adjustment",
+      description: "We use gentle, safe and specific chiropractic adjustments to help support healthy development, improve posture, and address common childhood issues in a natural way specifically for babies, toddlers and growing kids.",
       popular: false,
       icon: Baby,
-      features: ["Growth Support", "Gentle Techniques", "Parent Education"]
+      features: ["Healthy Development", "Gentle & Safe", "Natural Care"]
     },
     {
-      title: "Prenatal Chiropractic",
-      description: "Expert care for expectant mothers, supporting comfort and wellness throughout pregnancy journey.",
+      title: "Pregnancy Chiropractic Adjustment",
+      description: "We offer specialised prenatal chiropractic care using the Webster Technique—a gentle method designed to balance the pelvis and reduce tension in the surrounding muscles and ligaments. This can help relieve pain, improve mobility, and create more space for baby to move and grow.",
       popular: true,
       icon: Heart,
-      features: ["Pregnancy Support", "Labor Preparation", "Comfort Enhancement"]
+      features: ["Webster Technique", "Pelvic Balance", "Pain Relief"]
     },
     {
-      title: "Dry Needling Therapy",
-      description: "Advanced muscle therapy targeting trigger points for immediate pain relief and improved function.",
-      popular: true,
-      icon: Target,
-      features: ["Trigger Point Release", "Fast Pain Relief", "Muscle Recovery"]
-    },
-    {
-      title: "Flexion Distraction",
-      description: "Specialized non-surgical disc therapy using state-of-the-art equipment for spinal decompression.",
+      title: "Postpartum Chiropractic Adjustment",
+      description: "We provide gentle, effective care to help new mothers regain balance, reduce pain, and restore strength after childbirth. We understand that your body has just done something incredible—and now it's adjusting to a new routine of holding, feeding, and carrying your baby.",
       popular: false,
-      icon: Zap,
-      features: ["Disc Therapy", "Non-Surgical", "Spinal Decompression"]
+      icon: Heart,
+      features: ["Postpartum Recovery", "Balance Restoration", "Pain Reduction"]
     },
     {
       title: "Physiotherapy",
-      description: "Comprehensive rehabilitation therapy focused on restoring movement, strength, and function.",
+      description: "Physiotherapy focuses on restoring movement, reducing pain, and helping your body recover from injury or dysfunction. It's a science-based approach that uses targeted exercises, manual therapy, and education to improve strength, mobility, and function.",
       popular: false,
       icon: Activity,
-      features: ["Movement Restoration", "Strength Building", "Injury Prevention"]
+      features: ["Movement Restoration", "Pain Reduction", "Strength Building"]
+    },
+    {
+      title: "Dry Needling Therapy",
+      description: "Dry needling is a highly effective technique used to relieve muscular pain and tension by targeting tight knots or \"trigger points\" within the muscles. It involves inserting fine, sterile needles into specific areas to release tension, improve blood flow, and restore normal muscle function.",
+      popular: true,
+      icon: Target,
+      features: ["Trigger Point Release", "Tension Relief", "Muscle Recovery"]
     }
   ];
 
