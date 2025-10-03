@@ -5,14 +5,19 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { MapPin, Phone, Mail, Clock, Send, CalendarIcon } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { format } from "date-fns";
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedService, setSelectedService] = useState("");
+  const [selectedDate, setSelectedDate] = useState<Date>();
+  const [selectedTime, setSelectedTime] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -46,6 +51,9 @@ const Contact = () => {
           type: "contact",
           ...formData,
           service: selectedService,
+          preferredDateTime: selectedDate && selectedTime 
+            ? `${format(selectedDate, "MMMM dd, yyyy")} at ${selectedTime}`
+            : undefined,
         },
       });
 
@@ -65,6 +73,8 @@ const Contact = () => {
         message: "",
       });
       setSelectedService("");
+      setSelectedDate(undefined);
+      setSelectedTime("");
     } catch (error) {
       console.error("Error sending message:", error);
       toast({
@@ -170,6 +180,49 @@ const Contact = () => {
                         ))}
                       </SelectContent>
                     </Select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label>Preferred Appointment Date & Time (Optional)</Label>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <Button
+                            variant="outline"
+                            className="justify-start text-left font-normal border-border"
+                          >
+                            <CalendarIcon className="mr-2 h-4 w-4" />
+                            {selectedDate ? format(selectedDate, "MMM dd, yyyy") : "Pick a date"}
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-auto p-0">
+                          <Calendar
+                            mode="single"
+                            selected={selectedDate}
+                            onSelect={setSelectedDate}
+                            initialFocus
+                            disabled={(date) => date < new Date()}
+                          />
+                        </PopoverContent>
+                      </Popover>
+                      
+                      <Select value={selectedTime} onValueChange={setSelectedTime}>
+                        <SelectTrigger className="border-border focus:ring-secondary">
+                          <SelectValue placeholder="Select time" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="9:00 AM">9:00 AM</SelectItem>
+                          <SelectItem value="10:00 AM">10:00 AM</SelectItem>
+                          <SelectItem value="11:00 AM">11:00 AM</SelectItem>
+                          <SelectItem value="12:00 PM">12:00 PM</SelectItem>
+                          <SelectItem value="1:00 PM">1:00 PM</SelectItem>
+                          <SelectItem value="2:00 PM">2:00 PM</SelectItem>
+                          <SelectItem value="3:00 PM">3:00 PM</SelectItem>
+                          <SelectItem value="4:00 PM">4:00 PM</SelectItem>
+                          <SelectItem value="5:00 PM">5:00 PM</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
                   </div>
                   
                   <div className="space-y-2">
@@ -280,27 +333,17 @@ const Contact = () => {
                     Need Immediate Care?
                   </h3>
                   <p className="text-accent-foreground/80 mb-6">
-                    For urgent matters or to schedule an appointment right away, 
-                    message us on WhatsApp or book online.
+                    For urgent matters, message us on WhatsApp for immediate assistance.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button 
-                      className="gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce"
-                      asChild
-                    >
-                      <a href="https://wa.me/60128286173?text=Hello%2C%20I%20have%20an%20urgent%20matter%20and%20would%20like%20to%20contact%20Vertex%20Chiropractic" target="_blank" rel="noopener noreferrer">
-                        <Phone className="w-4 h-4 mr-2" />
-                        WhatsApp Us
-                      </a>
-                    </Button>
-                    <Button 
-                      variant="outline"
-                      className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent transition-smooth"
-                      asChild
-                    >
-                      <a href="/appointments">Book Online</a>
-                    </Button>
-                  </div>
+                  <Button 
+                    className="gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce w-full"
+                    asChild
+                  >
+                    <a href="https://wa.me/60128286173?text=Hello%2C%20I%20have%20an%20urgent%20matter%20and%20would%20like%20to%20contact%20Vertex%20Chiropractic" target="_blank" rel="noopener noreferrer">
+                      <Phone className="w-4 h-4 mr-2" />
+                      WhatsApp Us
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
