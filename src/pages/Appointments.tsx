@@ -6,11 +6,72 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar, Clock, User, Phone, CheckCircle } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Appointments = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedService, setSelectedService] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    reason: "",
+    insurance: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          type: "appointment",
+          ...formData,
+          service: selectedService,
+          date: selectedDate,
+          time: selectedTime,
+        },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Appointment request sent!",
+        description: "We'll confirm your appointment within 24 hours.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        reason: "",
+        insurance: "",
+      });
+      setSelectedService("");
+      setSelectedDate("");
+      setSelectedTime("");
+    } catch (error) {
+      console.error("Error booking appointment:", error);
+      toast({
+        title: "Error",
+        description: "Failed to book appointment. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const services = [
     "Initial Consultation",
@@ -66,7 +127,7 @@ const Appointments = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Personal Information */}
                     <div className="space-y-4">
                       <h3 className="text-lg font-semibold text-foreground flex items-center">
@@ -77,7 +138,9 @@ const Appointments = () => {
                         <div className="space-y-2">
                           <Label htmlFor="firstName">First Name *</Label>
                           <Input 
-                            id="firstName" 
+                            id="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
                             placeholder="Enter your first name"
                             className="border-border focus:ring-secondary"
                             required
@@ -86,7 +149,9 @@ const Appointments = () => {
                         <div className="space-y-2">
                           <Label htmlFor="lastName">Last Name *</Label>
                           <Input 
-                            id="lastName" 
+                            id="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
                             placeholder="Enter your last name"
                             className="border-border focus:ring-secondary"
                             required
@@ -99,7 +164,9 @@ const Appointments = () => {
                           <Label htmlFor="email">Email *</Label>
                           <Input 
                             id="email" 
-                            type="email" 
+                            type="email"
+                            value={formData.email}
+                            onChange={handleChange}
                             placeholder="Enter your email"
                             className="border-border focus:ring-secondary"
                             required
@@ -109,7 +176,9 @@ const Appointments = () => {
                           <Label htmlFor="phone">Phone Number *</Label>
                           <Input 
                             id="phone" 
-                            type="tel" 
+                            type="tel"
+                            value={formData.phone}
+                            onChange={handleChange}
                             placeholder="Enter your phone number"
                             className="border-border focus:ring-secondary"
                             required
@@ -178,7 +247,9 @@ const Appointments = () => {
                       <div className="space-y-2">
                         <Label htmlFor="reason">Reason for Visit</Label>
                         <Textarea 
-                          id="reason" 
+                          id="reason"
+                          value={formData.reason}
+                          onChange={handleChange}
                           placeholder="Briefly describe your symptoms or reason for the visit..."
                           rows={4}
                           className="border-border focus:ring-secondary"
@@ -188,7 +259,9 @@ const Appointments = () => {
                       <div className="space-y-2">
                         <Label htmlFor="insurance">Insurance Provider (Optional)</Label>
                         <Input 
-                          id="insurance" 
+                          id="insurance"
+                          value={formData.insurance}
+                          onChange={handleChange}
                           placeholder="Enter your insurance provider"
                           className="border-border focus:ring-secondary"
                         />
@@ -196,11 +269,12 @@ const Appointments = () => {
                     </div>
                     
                     <Button 
-                      type="submit" 
+                      type="submit"
+                      disabled={isSubmitting}
                       className="w-full gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce"
                     >
                       <Calendar className="w-4 h-4 mr-2" />
-                      Book Appointment
+                      {isSubmitting ? "Booking..." : "Book Appointment"}
                     </Button>
                   </form>
                 </CardContent>

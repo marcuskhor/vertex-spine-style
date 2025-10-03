@@ -1,11 +1,67 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          type: "contact",
+          ...formData,
+        },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -34,22 +90,28 @@ const Contact = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First Name</Label>
                       <Input 
-                        id="firstName" 
+                        id="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
                         placeholder="Enter your first name"
                         className="border-border focus:ring-secondary"
+                        required
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName">Last Name</Label>
                       <Input 
-                        id="lastName" 
+                        id="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
                         placeholder="Enter your last name"
                         className="border-border focus:ring-secondary"
+                        required
                       />
                     </div>
                   </div>
@@ -58,9 +120,12 @@ const Contact = () => {
                     <Label htmlFor="email">Email</Label>
                     <Input 
                       id="email" 
-                      type="email" 
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="Enter your email"
                       className="border-border focus:ring-secondary"
+                      required
                     />
                   </div>
                   
@@ -68,16 +133,21 @@ const Contact = () => {
                     <Label htmlFor="phone">Phone Number</Label>
                     <Input 
                       id="phone" 
-                      type="tel" 
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
                       placeholder="Enter your phone number"
                       className="border-border focus:ring-secondary"
+                      required
                     />
                   </div>
                   
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
                     <Input 
-                      id="subject" 
+                      id="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
                       placeholder="What is this regarding?"
                       className="border-border focus:ring-secondary"
                     />
@@ -86,7 +156,9 @@ const Contact = () => {
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
                     <Textarea 
-                      id="message" 
+                      id="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       placeholder="Tell us more about your needs..."
                       rows={5}
                       className="border-border focus:ring-secondary"
@@ -94,11 +166,12 @@ const Contact = () => {
                   </div>
                   
                   <Button 
-                    type="submit" 
+                    type="submit"
+                    disabled={isSubmitting}
                     className="w-full gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce"
                   >
                     <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
