@@ -18,7 +18,7 @@ import {
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-chiropractic-new.jpg";
 import doctorImage from "@/assets/leh.jpg";
-import whyChooseImage from "@/assets/doctor-homepage.jpg";
+import whyChooseImage from "@/assets/why-choose-vertex.jpg";
 import clinicImage1 from "@/assets/IMG_0726.jpg";
 import clinicImage2 from "@/assets/IMG_7368.jpg";
 import clinicImage3 from "@/assets/IMG_1598.jpg";
