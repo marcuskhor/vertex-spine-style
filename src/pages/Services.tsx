@@ -18,7 +18,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import doctorImage from "@/assets/leh.jpg";
+import doctorImage from "@/assets/doctor-new.jpg";
 
 const Services = () => {
   const services = [
