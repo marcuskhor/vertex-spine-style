@@ -55,7 +55,7 @@ const Header = () => {
               className="hidden sm:flex gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce"
               asChild
             >
-              <Link to="/appointments">
+              <Link to="/contact">
                 <Phone className="w-4 h-4 mr-2" />
                 Book Appointment
               </Link>
@@ -95,7 +95,7 @@ const Header = () => {
                 className="mx-4 mt-2 gradient-primary border-0 text-primary-foreground shadow-primary"
                 asChild
               >
-                <Link to="/appointments" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                   <Phone className="w-4 h-4 mr-2" />
                   Book Appointment
                 </Link>
