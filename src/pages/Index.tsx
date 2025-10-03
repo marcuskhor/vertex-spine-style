@@ -106,7 +106,7 @@ const Index = () => {
                 className="text-lg px-8 py-4 h-auto"
                 asChild
               >
-                <Link to="/appointments">
+                <Link to="/contact">
                   <Calendar className="w-5 h-5 mr-2" />
                   Book Appointment
                 </Link>
@@ -539,7 +539,7 @@ const Index = () => {
               className="bg-secondary hover:bg-secondary-light text-secondary-foreground border-0 shadow-secondary hover:scale-105 transition-bounce"
               asChild
             >
-              <Link to="/appointments">
+              <Link to="/contact">
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Your Consultation
               </Link>
