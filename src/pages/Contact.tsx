@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -11,6 +12,7 @@ import { supabase } from "@/integrations/supabase/client";
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,6 +21,16 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+
+  const services = [
+    "Initial Consultation",
+    "Adults Chiropractic",
+    "Kids Chiropractic",
+    "Prenatal Chiropractic",
+    "Dry Needling Therapy",
+    "Flexion Distraction Therapy",
+    "Physiotherapy"
+  ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -33,6 +45,7 @@ const Contact = () => {
         body: {
           type: "contact",
           ...formData,
+          service: selectedService,
         },
       });
 
@@ -51,6 +64,7 @@ const Contact = () => {
         subject: "",
         message: "",
       });
+      setSelectedService("");
     } catch (error) {
       console.error("Error sending message:", error);
       toast({
@@ -140,6 +154,22 @@ const Contact = () => {
                       className="border-border focus:ring-secondary"
                       required
                     />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="service">Service Interested In</Label>
+                    <Select value={selectedService} onValueChange={setSelectedService}>
+                      <SelectTrigger className="border-border focus:ring-secondary">
+                        <SelectValue placeholder="Select a service (optional)" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {services.map((service) => (
+                          <SelectItem key={service} value={service.toLowerCase().replace(/\s+/g, '-')}>
+                            {service}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                   
                   <div className="space-y-2">

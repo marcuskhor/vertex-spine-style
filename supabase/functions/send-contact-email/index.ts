@@ -42,6 +42,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>From:</strong> ${data.firstName} ${data.lastName}</p>
         <p><strong>Email:</strong> ${data.email}</p>
         <p><strong>Phone:</strong> ${data.phone}</p>
+        ${data.service ? `<p><strong>Service Interested In:</strong> ${data.service}</p>` : ""}
         ${data.subject ? `<p><strong>Subject:</strong> ${data.subject}</p>` : ""}
         ${data.message ? `<p><strong>Message:</strong></p><p>${data.message.replace(/\n/g, "<br>")}</p>` : ""}
       `;
