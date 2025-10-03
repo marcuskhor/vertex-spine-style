@@ -18,6 +18,7 @@ import {
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-chiropractic-new.jpg";
 import doctorImage from "@/assets/leh.jpg";
+import whyChooseImage from "@/assets/doctor-homepage.jpg";
 import clinicImage1 from "@/assets/IMG_0726.jpg";
 import clinicImage2 from "@/assets/IMG_7368.jpg";
 import clinicImage3 from "@/assets/IMG_1598.jpg";
@@ -450,7 +451,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
               <img 
-                src={clinicImage3} 
+                src={whyChooseImage} 
                 alt="Dr. Lim explaining spinal health at Vertex Chiropractic clinic"
                 className="w-full h-full object-cover"
               />
