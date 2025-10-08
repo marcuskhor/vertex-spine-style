@@ -67,7 +67,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Vertex Chiropractic <onboarding@resend.dev>",
-      to: ["m.khor@hotmail.com"],
+      to: ["vertexchiro@gmail.com"],
       subject: emailSubject,
       html: emailHtml,
     });

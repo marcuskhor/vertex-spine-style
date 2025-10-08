@@ -305,8 +305,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Email</h4>
                       <p className="text-muted-foreground">
-                        General: info@vertexchiro.com<br />
-                        Appointments: appointments@vertexchiro.com
+                        vertexchiro@gmail.com
                       </p>
                     </div>
                   </div>
