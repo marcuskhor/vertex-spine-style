@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
-import { MapPin, Phone, Mail, Clock, Send, CalendarIcon } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CalendarIcon, Facebook, Instagram, BookOpen } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { format } from "date-fns";
@@ -321,6 +321,39 @@ const Contact = () => {
                         <p>Saturday: 9:00 AM - 2:00 PM</p>
                         <p>Sunday: Closed</p>
                       </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-6 border-t border-border">
+                    <h4 className="font-semibold text-foreground mb-4">Follow Us</h4>
+                    <div className="flex space-x-4">
+                      <a 
+                        href="https://www.facebook.com/profile.php?id=61569316016767" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 gradient-healing hover:scale-110 rounded-lg flex items-center justify-center transition-smooth"
+                        aria-label="Facebook"
+                      >
+                        <Facebook className="w-5 h-5 text-primary" />
+                      </a>
+                      <a 
+                        href="https://www.instagram.com/vertexchiro/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 gradient-healing hover:scale-110 rounded-lg flex items-center justify-center transition-smooth"
+                        aria-label="Instagram"
+                      >
+                        <Instagram className="w-5 h-5 text-primary" />
+                      </a>
+                      <a 
+                        href="https://www.xiaohongshu.com/user/profile/64298e810000000012013dea?xsec_token=&xsec_source=pc_note" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 gradient-healing hover:scale-110 rounded-lg flex items-center justify-center transition-smooth"
+                        aria-label="RedNote"
+                      >
+                        <BookOpen className="w-5 h-5 text-primary" />
+                      </a>
                     </div>
                   </div>
                 </CardContent>

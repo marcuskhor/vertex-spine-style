@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, BookOpen } from "lucide-react";
 import vertexLogo from "@/assets/vertex-logo-final.png";
 
 const Footer = () => {
@@ -28,6 +28,35 @@ const Footer = () => {
               Dedicated to providing exceptional chiropractic care and helping our patients 
               achieve optimal health and wellness through natural, effective treatments.
             </p>
+            <div className="flex space-x-4">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61569316016767" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full flex items-center justify-center transition-smooth"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5 text-primary-foreground" />
+              </a>
+              <a 
+                href="https://www.instagram.com/vertexchiro/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full flex items-center justify-center transition-smooth"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5 text-primary-foreground" />
+              </a>
+              <a 
+                href="https://www.xiaohongshu.com/user/profile/64298e810000000012013dea?xsec_token=&xsec_source=pc_note" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full flex items-center justify-center transition-smooth"
+                aria-label="RedNote"
+              >
+                <BookOpen className="w-5 h-5 text-primary-foreground" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
