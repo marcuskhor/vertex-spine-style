@@ -211,7 +211,6 @@ const Contact = () => {
                           <SelectValue placeholder="Select time" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="9:00 AM">9:00 AM</SelectItem>
                           <SelectItem value="10:00 AM">10:00 AM</SelectItem>
                           <SelectItem value="11:00 AM">11:00 AM</SelectItem>
                           <SelectItem value="12:00 PM">12:00 PM</SelectItem>
@@ -220,6 +219,8 @@ const Contact = () => {
                           <SelectItem value="3:00 PM">3:00 PM</SelectItem>
                           <SelectItem value="4:00 PM">4:00 PM</SelectItem>
                           <SelectItem value="5:00 PM">5:00 PM</SelectItem>
+                          <SelectItem value="6:00 PM">6:00 PM</SelectItem>
+                          <SelectItem value="7:00 PM">7:00 PM</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -317,9 +318,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Hours</h4>
                       <div className="text-muted-foreground space-y-1">
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p>Saturday: 9:00 AM - 2:00 PM</p>
-                        <p>Sunday: Closed</p>
+                        <p>Everyday: 10:00 AM - 7:00 PM</p>
                       </div>
                     </div>
                   </div>

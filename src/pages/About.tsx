@@ -71,9 +71,9 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Meet Dr. Lim</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Meet Dr. Ean</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                At Vertex Chiropractic, Dr. Lim believes that everyone deserves to live a life free from pain 
+                At Vertex Chiropractic, Dr. Ean believes that everyone deserves to live a life free from pain
                 and full of vitality. Our mission is to provide comprehensive, personalized chiropractic 
                 care that addresses not just symptoms, but the root cause of your health concerns.
               </p>
@@ -93,7 +93,7 @@ const About = () => {
             <div className="rounded-2xl overflow-hidden shadow-primary">
               <img 
                 src={doctorImage} 
-                alt="Dr. Lim - Professional chiropractor at Vertex Chiropractic Center"
+                alt="Dr. Ean - Professional chiropractor at Vertex Chiropractic Center"
                 className="w-full h-96 object-cover"
               />
             </div>
@@ -161,7 +161,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Professional Credentials</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Dr. Lim maintains the highest level of professional qualifications and continues 
+                Dr. Ean maintains the highest level of professional qualifications and continues
                 to advance his knowledge through ongoing education and training in specialized techniques.
               </p>
               

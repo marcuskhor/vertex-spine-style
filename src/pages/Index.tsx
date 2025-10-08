@@ -357,7 +357,7 @@ const Index = () => {
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
                 src={clinicImage1} 
-                alt="Dr. Lim providing pediatric chiropractic care"
+                alt="Dr. Ean providing pediatric chiropractic care"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
             </div>
@@ -406,7 +406,7 @@ const Index = () => {
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft">
               <img 
                 src={clinicImage8} 
-                alt="Happy patient with Dr. Lim at Vertex Chiropractic"
+                alt="Happy patient with Dr. Ean at Vertex Chiropractic"
                 className="w-full h-full object-cover hover:scale-105 transition-smooth"
               />
             </div>
@@ -432,11 +432,11 @@ const Index = () => {
                 <div className="aspect-[3/4] rounded-lg mb-4 overflow-hidden shadow-soft">
                   <img 
                     src={doctorImage} 
-                    alt="Dr. Lim - Lead Chiropractor at Vertex Chiropractic"
+                    alt="Dr. Ean - Lead Chiropractor at Vertex Chiropractic"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. Lim</h3>
+                <h3 className="text-xl font-semibold text-accent-foreground mb-2">Dr. Ean</h3>
                 <p className="text-accent-foreground/70 mb-3">Lead Chiropractor</p>
                 <p className="text-sm text-accent-foreground/80">Specialized in adults, kids, and prenatal chiropractic care, dry needling therapy, and flexion distraction therapy with extensive experience in helping patients achieve optimal health.</p>
               </CardContent>
@@ -452,7 +452,7 @@ const Index = () => {
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
               <img 
                 src={whyChooseImage} 
-                alt="Dr. Lim explaining spinal health at Vertex Chiropractic clinic"
+                alt="Dr. Ean explaining spinal health at Vertex Chiropractic clinic"
                 className="w-full h-full object-cover"
               />
             </div>

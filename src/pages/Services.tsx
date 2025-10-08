@@ -241,31 +241,31 @@ const Services = () => {
                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg flex-shrink-0">
                   <img 
                     src={doctorImage} 
-                    alt="Dr. Lim - Lead Chiropractor at Vertex Chiropractic"
+                    alt="Dr. Ean - Lead Chiropractor at Vertex Chiropractic"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex-1 text-center lg:text-left">
                   <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
-                    <h3 className="text-2xl font-bold">Dr. Lim</h3>
+                    <h3 className="text-2xl font-bold">Dr. Ean</h3>
                     <Badge className="bg-primary/10 text-primary">Lead Chiropractor</Badge>
                   </div>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    With over 10 years of experience, Dr. Lim specializes in comprehensive chiropractic care for all ages. 
+                    With over 10 years of experience, Dr. Ean specializes in comprehensive chiropractic care for all ages.
                     Certified in advanced techniques including dry needling and flexion distraction therapy, 
                     providing evidence-based treatment for optimal patient outcomes.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <Button asChild>
                       <Link to="/about">
-                        Learn More About Dr. Lim
+                        Learn More About Dr. Ean
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </Button>
                     <Button variant="outline" asChild>
                       <Link to="/appointments">
                         <Calendar className="w-4 h-4 mr-2" />
-                        Book with Dr. Lim
+                        Book with Dr. Ean
                       </Link>
                     </Button>
                   </div>
