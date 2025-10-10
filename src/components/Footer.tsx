@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, BookOpen } from "lucide-react";
 import vertexLogo from "@/assets/vertex-logo-final.png";
+import govCert from "@/assets/gov_cert.png";
+import acmCert from "@/assets/acm.png";
+import icpaCert from "@/assets/icpa.png";
+import gemtCert from "@/assets/gemt.png";
 
 const Footer = () => {
   const navigation = [
@@ -105,7 +109,38 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border mt-4 pt-4 text-center text-sm text-muted-foreground">
+        {/* Certifications */}
+        <div className="border-t border-border mt-8 pt-8">
+          <div className="text-center mb-4">
+            <h4 className="font-semibold text-foreground text-sm uppercase tracking-wide mb-4">
+              Licensed & Certified
+            </h4>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+            <img 
+              src={govCert} 
+              alt="Malaysian Traditional and Complementary Medicine Certification"
+              className="h-16 md:h-20 w-auto opacity-60 hover:opacity-100 transition-smooth"
+            />
+            <img 
+              src={acmCert} 
+              alt="Association of Chiropractic Malaysia"
+              className="h-16 md:h-20 w-auto opacity-60 hover:opacity-100 transition-smooth"
+            />
+            <img 
+              src={icpaCert} 
+              alt="ICPA Supporting Member"
+              className="h-16 md:h-20 w-auto opacity-60 hover:opacity-100 transition-smooth"
+            />
+            <img 
+              src={gemtCert} 
+              alt="Global Education of Manual Therapists"
+              className="h-16 md:h-20 w-auto opacity-60 hover:opacity-100 transition-smooth"
+            />
+          </div>
+        </div>
+
+        <div className="border-t border-border mt-8 pt-4 text-center text-sm text-muted-foreground">
           <p>© 2024 Vertex Chiropractic. All rights reserved. | Professional chiropractic care for optimal health.</p>
         </div>
       </div>

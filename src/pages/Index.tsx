@@ -27,6 +27,10 @@ import clinicImage5 from "@/assets/IMG_3441.jpg";
 import clinicImage6 from "@/assets/IMG_5537.jpg";
 import clinicImage7 from "@/assets/IMG_3014.jpg";
 import clinicImage8 from "@/assets/IMG_7366.jpg";
+import govCert from "@/assets/gov_cert.png";
+import acmCert from "@/assets/acm.png";
+import icpaCert from "@/assets/icpa.png";
+import gemtCert from "@/assets/gemt.png";
 
 const Index = () => {
   const services = [
@@ -441,6 +445,51 @@ const Index = () => {
                 <p className="text-sm text-accent-foreground/80">Specialized in adults, kids, and prenatal chiropractic care, dry needling therapy, and flexion distraction therapy with extensive experience in helping patients achieve optimal health.</p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications & Memberships */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Licensed & Certified Professionals
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our commitment to excellence is reflected in our professional certifications and memberships
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            <div className="bg-white p-6 rounded-lg shadow-soft hover:shadow-md transition-smooth">
+              <img 
+                src={govCert} 
+                alt="Malaysian Traditional and Complementary Medicine Certification"
+                className="h-24 md:h-32 w-auto grayscale hover:grayscale-0 transition-smooth"
+              />
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-soft hover:shadow-md transition-smooth">
+              <img 
+                src={acmCert} 
+                alt="Association of Chiropractic Malaysia Member"
+                className="h-24 md:h-32 w-auto grayscale hover:grayscale-0 transition-smooth"
+              />
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-soft hover:shadow-md transition-smooth">
+              <img 
+                src={icpaCert} 
+                alt="ICPA Supporting Member - Discover Kids Health With Chiropractic"
+                className="h-24 md:h-32 w-auto grayscale hover:grayscale-0 transition-smooth"
+              />
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-soft hover:shadow-md transition-smooth">
+              <img 
+                src={gemtCert} 
+                alt="Global Education of Manual Therapists Certified"
+                className="h-24 md:h-32 w-auto grayscale hover:grayscale-0 transition-smooth"
+              />
+            </div>
           </div>
         </div>
       </section>
