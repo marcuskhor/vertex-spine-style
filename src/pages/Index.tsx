@@ -13,7 +13,8 @@ import {
   Activity,
   Shield,
   Clock,
-  Baby
+  Baby,
+  MessageCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-chiropractic-new.jpg";
@@ -122,7 +123,7 @@ const Index = () => {
                 asChild
               >
                 <a href="https://wa.me/60128286173?text=Hello%2C%20I%20would%20like%20to%20contact%20Vertex%20Chiropractic" target="_blank" rel="noopener noreferrer">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp 012-828 6173
                 </a>
               </Button>
@@ -593,17 +594,17 @@ const Index = () => {
                 Book Your Consultation
               </Link>
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-smooth"
-              asChild
-            >
-              <a href="https://wa.me/60128286173?text=Hello%2C%20I%20would%20like%20to%20contact%20Vertex%20Chiropractic" target="_blank" rel="noopener noreferrer">
-                <Phone className="w-5 h-5 mr-2" />
-                WhatsApp 012-828 6173
-              </a>
-            </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-smooth"
+                asChild
+              >
+                <a href="https://wa.me/60128286173?text=Hello%2C%20I%20would%20like%20to%20contact%20Vertex%20Chiropractic" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  WhatsApp 012-828 6173
+                </a>
+              </Button>
           </div>
 
           <p className="text-primary-foreground/70 mt-6 text-sm">

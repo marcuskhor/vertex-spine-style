@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
-import { MapPin, Phone, Mail, Clock, Send, CalendarIcon, Facebook, Instagram, BookOpen } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CalendarIcon, Facebook, Instagram, BookOpen, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { format } from "date-fns";
@@ -371,7 +371,7 @@ const Contact = () => {
                     asChild
                   >
                     <a href="https://wa.me/60128286173?text=Hello%2C%20I%20have%20an%20urgent%20matter%20and%20would%20like%20to%20contact%20Vertex%20Chiropractic" target="_blank" rel="noopener noreferrer">
-                      <Phone className="w-4 h-4 mr-2" />
+                      <MessageCircle className="w-4 h-4 mr-2" />
                       WhatsApp Us
                     </a>
                   </Button>
