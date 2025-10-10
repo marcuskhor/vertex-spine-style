@@ -252,8 +252,8 @@ const Services = () => {
                     <Badge className="bg-primary/10 text-primary">Lead Chiropractor</Badge>
                   </div>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    With over 10 years of experience, Dr. Ean specializes in comprehensive chiropractic care for all ages.
-                    Certified in advanced techniques including dry needling and flexion distraction therapy, 
+                    With over 5 years of experience, Dr. Ean specializes in comprehensive chiropractic care for all ages.
+                    Certified in advanced techniques including dry needling and Webster prenatal chiropractic, 
                     providing evidence-based treatment for optimal patient outcomes.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

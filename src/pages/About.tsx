@@ -44,7 +44,7 @@ const About = () => {
 
   const certifications = [
     "Doctor of Chiropractic (D.C.)",
-    "Licensed Chiropractic Physician",
+    "Certified Chiropractor",
     "Certified in Dry Needling Therapy",
     "Advanced Spinal Manipulation",
     "Flexion Distraction Technique",
@@ -87,7 +87,7 @@ const About = () => {
                 className="gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce"
                 asChild
               >
-                <Link to="/appointments">Start Your Journey</Link>
+                <Link to="/contact">Start Your Journey</Link>
               </Button>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-primary">
@@ -221,7 +221,7 @@ const About = () => {
               className="gradient-primary border-0 text-primary-foreground shadow-primary hover:scale-105 transition-bounce"
               asChild
             >
-              <Link to="/appointments">Book Consultation</Link>
+              <Link to="/contact">Book Consultation</Link>
             </Button>
             <Button 
               variant="outline" 
