@@ -9,7 +9,7 @@ import {
   Star
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import doctorImage from "@/assets/leh.jpg";
+import doctorImage from "@/assets/dr-ean.jpg";
 
 const About = () => {
   const values = [
