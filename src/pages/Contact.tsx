@@ -380,6 +380,30 @@ const Contact = () => {
               </Card>
             </div>
           </div>
+
+          {/* Google Map */}
+          <div className="mt-12">
+            <Card className="shadow-soft overflow-hidden">
+              <CardHeader>
+                <CardTitle className="text-2xl text-foreground">Find Us on the Map</CardTitle>
+                <CardDescription>
+                  Located in Plaza Arkadia, Desa Parkcity with convenient parking available.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-0">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.645698743906!2d101.63442287475944!3d3.1860621968583866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4923fb4a4139%3A0x9e990f708b680996!2sVertex%20Chiropractic%20Center!5e0!3m2!1sen!2smy!4v1704887700000!5m2!1sen!2smy"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Vertex Chiropractic Center Location"
+                />
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
     </div>
