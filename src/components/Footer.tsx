@@ -86,9 +86,10 @@ const Footer = () => {
               <div className="flex items-start space-x-3 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  Unit A-2-8, Perdana, Plaza Arkadia<br />
-                  3, Jalan Intisari, Desa Parkcity<br />
-                  52200 Kuala Lumpur, Wilayah Persekutuan
+                  Unit A-2-8, Plaza Arkadia<br />
+                  No. 3 Jalan Intisari Perdana<br />
+                  Desa Parkcity<br />
+                  52200 Kuala Lumpur
                 </span>
               </div>
               <div className="flex items-center space-x-3 text-sm">

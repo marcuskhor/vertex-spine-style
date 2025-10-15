@@ -278,9 +278,10 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Address</h4>
                       <p className="text-muted-foreground">
-                        Unit A-2-8, Perdana, Plaza Arkadia<br />
-                        3, Jalan Intisari, Desa Parkcity<br />
-                        52200 Kuala Lumpur, Wilayah Persekutuan
+                        Unit A-2-8, Plaza Arkadia<br />
+                        No. 3 Jalan Intisari Perdana<br />
+                        Desa Parkcity<br />
+                        52200 Kuala Lumpur
                       </p>
                     </div>
                   </div>
